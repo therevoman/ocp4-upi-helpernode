@@ -4,5 +4,5 @@ staticips: false
 ocp_bios: "https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/pre-release/4.2.0-0.nightly-2019-08-28-152644/rhcos-42.80.20190828.2-metal-bios.raw.gz"
 ocp_initramfs: "https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/pre-release/4.2.0-0.nightly-2019-08-28-152644/rhcos-42.80.20190828.2-installer-initramfs.img"
 ocp_install_kernel: "https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/pre-release/4.2.0-0.nightly-2019-08-28-152644/rhcos-42.80.20190828.2-installer-kernel"
-ocp_client: "https://mirror.openshift.com/pub/openshift-v4/clients/ocp-dev-preview/4.2.0-0.nightly-2019-09-20-225712/openshift-client-linux-4.2.0-0.nightly-2019-09-20-225712.tar.gz"
-ocp_installer: "https://mirror.openshift.com/pub/openshift-v4/clients/ocp-dev-preview/4.2.0-0.nightly-2019-09-20-225712/openshift-install-linux-4.2.0-0.nightly-2019-09-20-225712.tar.gz"
+ocp_client: "https://mirror.openshift.com/pub/openshift-v4/clients/ocp-dev-preview/4.2.0-0.nightly-2019-09-23-115152/openshift-client-linux-4.2.0-0.nightly-2019-09-23-115152.tar.gz"
+ocp_installer: "https://mirror.openshift.com/pub/openshift-v4/clients/ocp-dev-preview/4.2.0-0.nightly-2019-09-23-115152/openshift-install-linux-4.2.0-0.nightly-2019-09-23-115152.tar.gz"

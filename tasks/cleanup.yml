@@ -8,7 +8,7 @@
     with_items:
       - /etc/dhcp/dhcpd.conf
       - /etc/named.conf
-      - /usr/local/bin/set-dns-serial.sh
+#      - /usr/local/bin/set-dns-serial.sh
       - /var/named/zonefile.db
       - /var/named/reverse.db
       - /etc/haproxy/haproxy.cfg
