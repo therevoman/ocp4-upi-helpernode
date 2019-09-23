@@ -1,0 +1,46 @@
+---
+disk: vda
+helper:
+  name: "helper"
+  ipaddr: "192.168.4.2"
+  networkifacename: "eth1"
+dns:
+  domain: "revoweb.home"
+  clusterid: "ocp4"
+  forwarder1: "172.16.16.1"
+  forwarder2: "8.8.4.4"
+dhcp:
+  router: "192.168.4.1"
+  bcast: "192.168.4.255"
+  netmask: "255.255.255.0"
+  poolstart: "192.168.4.40"
+  poolend: "192.168.4.80"
+  ipid: "192.168.4.0"
+  netmaskid: "255.255.255.0"
+bootstrap:
+  name: "bootstrap"
+  ipaddr: "192.168.4.20"
+  macaddr: "56:6f:19:d6:00:0e"
+masters:
+  - name: "master0"
+    ipaddr: "192.168.4.21"
+    macaddr: "56:6f:19:d6:00:0a"
+  - name: "master1"
+    ipaddr: "192.168.4.22"
+    macaddr: "56:6f:19:d6:00:0b"
+  - name: "master2"
+    ipaddr: "192.168.4.23"
+    macaddr: "56:6f:19:d6:00:0c"
+workers:
+  - name: "worker0"
+    ipaddr: "192.168.4.11"
+    macaddr: "56:6f:19:d6:00:07"
+  - name: "worker1"
+    ipaddr: "192.168.4.12"
+    macaddr: "56:6f:19:d6:00:08"
+  - name: "worker2"
+    ipaddr: "192.168.4.13"
+    macaddr: "56:6f:19:d6:00:09"
+  - name: "worker3"
+    ipaddr: "192.168.4.14"
+    macaddr: "56:6f:19:d6:00:10"
