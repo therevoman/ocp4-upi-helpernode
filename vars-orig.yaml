@@ -1,0 +1,46 @@
+---
+disk: vda
+helper:
+  name: "helper"
+  ipaddr: "192.168.10.1"
+  networkifacename: "eth0"
+dns:
+  domain: "kla-tencor.com"
+  clusterid: "ocp4"
+  forwarder1: "10.39.11.50"
+  forwarder2: "10.42.6.20"
+dhcp:
+  router: "192.168.10.1"
+  bcast: "192.168.10.255"
+  netmask: "255.255.255.0"
+  poolstart: "192.168.10.40"
+  poolend: "192.168.10.70"
+  ipid: "192.168.10.0"
+  netmaskid: "255.255.255.0"
+bootstrap:
+  name: "bootstrap"
+  ipaddr: "192.168.10.20"
+  macaddr: "52:54:00:88:69:02"
+masters:
+  - name: "master0"
+    ipaddr: "192.168.10.21"
+    macaddr: "52:54:00:b3:bc:89"
+  - name: "master1"
+    ipaddr: "192.168.10.22"
+    macaddr: "52:54:00:d7:8c:77"
+  - name: "master2"
+    ipaddr: "192.168.10.23"
+    macaddr: "52:54:00:7d:69:d8"
+workers:
+  - name: "worker0"
+    ipaddr: "192.168.10.31"
+    macaddr: "52:54:00:fd:3d:56"
+  - name: "computenode1"
+    ipaddr: "192.168.10.32"
+    macaddr: "98:03:9b:4f:ac:e0"
+  - name: "computenode2"
+    ipaddr: "192.168.10.33"
+    macaddr: "98:03:9b:7b:b4:c2"
+  - name: "computenode3"
+    ipaddr: "192.168.10.34"
+    macaddr: "98:03:9b:54:9f:0e"

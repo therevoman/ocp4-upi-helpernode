@@ -1,0 +1,212 @@
+apiVersion: v1
+items:
+- apiVersion: samples.operator.openshift.io/v1
+  kind: Config
+  metadata:
+    creationTimestamp: "2019-09-20T19:58:56Z"
+    finalizers:
+    - samples.operator.openshift.io/finalizer
+    generation: 1
+    name: cluster
+    resourceVersion: "11011"
+    selfLink: /apis/samples.operator.openshift.io/v1/configs/cluster
+    uid: 145aeb7c-dbe1-11e9-9f64-0cc47a69a906
+  spec:
+    architectures:
+    - x86_64
+    managementState: Managed
+  status:
+    architectures:
+    - x86_64
+    conditions:
+    - lastTransitionTime: "2019-09-20T19:58:56Z"
+      lastUpdateTime: "2019-09-20T19:58:56Z"
+      status: "True"
+      type: ImportCredentialsExist
+    - lastTransitionTime: "2019-09-20T19:59:01Z"
+      lastUpdateTime: "2019-09-20T19:59:01Z"
+      status: "True"
+      type: ConfigurationValid
+    - lastTransitionTime: "2019-09-20T19:59:13Z"
+      lastUpdateTime: "2019-09-20T19:59:13Z"
+      message: '<imagestream/mariadb>Internal error occurred: Get https://registry.redhat.io/v2/:
+        x509: certificate signed by unknown authority<imagestream/mariadb><imagestream/jenkins-agent-nodejs>Internal
+        error occurred: Get https://quay.io/v2/: x509: certificate signed by unknown
+        authority<imagestream/jenkins-agent-nodejs><imagestream/eap-cd-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/eap-cd-openshift><imagestream/jenkins-agent-maven>Internal
+        error occurred: Get https://quay.io/v2/: x509: certificate signed by unknown
+        authority<imagestream/jenkins-agent-maven><imagestream/php>Internal error
+        occurred: Get https://registry.redhat.io/v2/: x509: certificate signed by
+        unknown authority<imagestream/php><imagestream/jboss-fuse70-console>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-fuse70-console><imagestream/modern-webapp>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/modern-webapp><imagestream/rhdm73-decisioncentral-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/rhdm73-decisioncentral-openshift><imagestream/jboss-fuse70-karaf-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-fuse70-karaf-openshift><imagestream/apicurito-ui>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/apicurito-ui><imagestream/jboss-fuse70-java-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-fuse70-java-openshift><imagestream/jboss-datavirt64-driver-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-datavirt64-driver-openshift><imagestream/redhat-sso71-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/redhat-sso71-openshift><imagestream/rhdm73-optaweb-employee-rostering-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/rhdm73-optaweb-employee-rostering-openshift><imagestream/fis-karaf-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/fis-karaf-openshift><imagestream/httpd>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/httpd><imagestream/dotnet>Internal error
+        occurred: Get https://registry.redhat.io/v2/: x509: certificate signed by
+        unknown authority<imagestream/dotnet><imagestream/jenkins>Internal error occurred:
+        Get https://quay.io/v2/: x509: certificate signed by unknown authority<imagestream/jenkins><imagestream/jboss-amq-62>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-amq-62><imagestream/openjdk-11-rhel7>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/openjdk-11-rhel7><imagestream/mongodb>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/mongodb><imagestream/nodejs>Internal error
+        occurred: Get https://registry.redhat.io/v2/: x509: certificate signed by
+        unknown authority<imagestream/nodejs><imagestream/jboss-datagrid72-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-datagrid72-openshift><imagestream/rhpam73-businesscentral-indexing-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/rhpam73-businesscentral-indexing-openshift><imagestream/rhdm73-decisioncentral-indexing-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/rhdm73-decisioncentral-indexing-openshift><imagestream/ruby>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/ruby><imagestream/rhpam73-smartrouter-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/rhpam73-smartrouter-openshift><imagestream/jboss-eap71-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-eap71-openshift><imagestream/jboss-datagrid71-client-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-datagrid71-client-openshift><imagestream/jboss-processserver64-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-processserver64-openshift><imagestream/rhpam73-businesscentral-monitoring-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/rhpam73-businesscentral-monitoring-openshift><imagestream/jboss-datagrid65-client-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-datagrid65-client-openshift><imagestream/jboss-eap64-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-eap64-openshift><imagestream/jboss-eap70-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-eap70-openshift><imagestream/fuse7-karaf-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/fuse7-karaf-openshift><imagestream/redhat-sso72-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/redhat-sso72-openshift><imagestream/jboss-webserver31-tomcat8-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-webserver31-tomcat8-openshift><imagestream/rhpam73-kieserver-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/rhpam73-kieserver-openshift><imagestream/jboss-amq-63>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-amq-63><imagestream/jboss-webserver31-tomcat7-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-webserver31-tomcat7-openshift><imagestream/jboss-decisionserver64-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-decisionserver64-openshift><imagestream/perl>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/perl><imagestream/jboss-datagrid71-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-datagrid71-openshift><imagestream/redhat-sso73-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/redhat-sso73-openshift><imagestream/jboss-eap72-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-eap72-openshift><imagestream/apicast-gateway>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/apicast-gateway><imagestream/jboss-webserver50-tomcat9-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-webserver50-tomcat9-openshift><imagestream/fuse7-console>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/fuse7-console><imagestream/jboss-datavirt64-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-datavirt64-openshift><imagestream/rhdm73-kieserver-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/rhdm73-kieserver-openshift><imagestream/jboss-datagrid65-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-datagrid65-openshift><imagestream/jboss-webserver30-tomcat7-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-webserver30-tomcat7-openshift><imagestream/jboss-fuse70-eap-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-fuse70-eap-openshift><imagestream/jboss-webserver30-tomcat8-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-webserver30-tomcat8-openshift><imagestream/python>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/python><imagestream/redhat-sso70-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/redhat-sso70-openshift><imagestream/postgresql>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/postgresql><imagestream/java>Internal error
+        occurred: Get https://registry.redhat.io/v2/: x509: certificate signed by
+        unknown authority<imagestream/java><imagestream/golang>Internal error occurred:
+        Get https://registry.redhat.io/v2/: x509: certificate signed by unknown authority<imagestream/golang><imagestream/fis-java-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/fis-java-openshift><imagestream/jboss-datagrid73-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/jboss-datagrid73-openshift><imagestream/fuse7-java-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/fuse7-java-openshift><imagestream/redhat-openjdk18-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/redhat-openjdk18-openshift><imagestream/fuse7-eap-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/fuse7-eap-openshift><imagestream/mysql>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/mysql><imagestream/dotnet-runtime>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/dotnet-runtime><imagestream/fuse-apicurito-generator>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/fuse-apicurito-generator><imagestream/redis>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/redis><imagestream/rhpam73-businesscentral-openshift>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/rhpam73-businesscentral-openshift><imagestream/nginx>Internal
+        error occurred: Get https://registry.redhat.io/v2/: x509: certificate signed
+        by unknown authority<imagestream/nginx>'
+      reason: 'mariadb jenkins-agent-nodejs eap-cd-openshift jenkins-agent-maven php
+        jboss-fuse70-console modern-webapp rhdm73-decisioncentral-openshift jboss-fuse70-karaf-openshift
+        apicurito-ui jboss-fuse70-java-openshift jboss-datavirt64-driver-openshift
+        redhat-sso71-openshift rhdm73-optaweb-employee-rostering-openshift fis-karaf-openshift
+        httpd dotnet jenkins jboss-amq-62 openjdk-11-rhel7 mongodb nodejs jboss-datagrid72-openshift
+        rhpam73-businesscentral-indexing-openshift rhdm73-decisioncentral-indexing-openshift
+        ruby rhpam73-smartrouter-openshift jboss-eap71-openshift jboss-datagrid71-client-openshift
+        jboss-processserver64-openshift rhpam73-businesscentral-monitoring-openshift
+        jboss-datagrid65-client-openshift jboss-eap64-openshift jboss-eap70-openshift
+        fuse7-karaf-openshift redhat-sso72-openshift jboss-webserver31-tomcat8-openshift
+        rhpam73-kieserver-openshift jboss-amq-63 jboss-webserver31-tomcat7-openshift
+        jboss-decisionserver64-openshift perl jboss-datagrid71-openshift redhat-sso73-openshift
+        jboss-eap72-openshift apicast-gateway jboss-webserver50-tomcat9-openshift
+        fuse7-console jboss-datavirt64-openshift rhdm73-kieserver-openshift jboss-datagrid65-openshift
+        jboss-webserver30-tomcat7-openshift jboss-fuse70-eap-openshift jboss-webserver30-tomcat8-openshift
+        python redhat-sso70-openshift postgresql java golang fis-java-openshift jboss-datagrid73-openshift
+        fuse7-java-openshift redhat-openjdk18-openshift fuse7-eap-openshift mysql
+        dotnet-runtime fuse-apicurito-generator redis rhpam73-businesscentral-openshift
+        nginx '
+      status: "True"
+      type: ImportImageErrorsExist
+    - lastTransitionTime: "2019-09-20T19:59:13Z"
+      lastUpdateTime: "2019-09-20T19:59:13Z"
+      status: "False"
+      type: ImageChangesInProgress
+    - lastTransitionTime: "2019-09-20T19:59:04Z"
+      lastUpdateTime: "2019-09-20T19:59:04Z"
+      status: "True"
+      type: SamplesExist
+    - lastTransitionTime: "2019-09-20T19:59:01Z"
+      lastUpdateTime: "2019-09-20T19:59:01Z"
+      status: "False"
+      type: RemovePending
+    - lastTransitionTime: "2019-09-20T19:59:01Z"
+      lastUpdateTime: "2019-09-20T19:59:01Z"
+      status: "False"
+      type: MigrationInProgress
+    managementState: Managed
+    version: 4.2.0-0.nightly-2019-09-20-102942
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
