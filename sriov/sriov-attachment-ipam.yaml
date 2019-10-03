@@ -1,0 +1,14 @@
+apiVersion: "k8s.cni.cncf.io/v1"
+kind: NetworkAttachmentDefinition
+metadata:
+  name: sriov-net2
+  annotations:
+    k8s.v1.cni.cncf.io/resourceName: openshift.io/sriov
+spec:
+  config: '{
+    "type": "sriov",
+    "name": "sriov-net2",
+    "ipam": {
+      "type": "dhcp"
+      }
+    }'

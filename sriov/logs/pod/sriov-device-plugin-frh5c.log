@@ -1,0 +1,56 @@
+I1003 00:04:08.846225      19 manager.go:70] Using Kubelet Plugin Registry Mode
+I1003 00:04:08.846286      19 main.go:44] resource manager reading configs
+I1003 00:04:08.846350      19 manager.go:98] ResourceList: [{ResourceName:sriov IsRdma:true Selectors:{Vendors:[15b3] Devices:[1018] Drivers:[iavf mlx5_core i40evf ixgbevf] PfNames:[]}}]
+I1003 00:04:08.846383      19 main.go:60] Discovering host network devices
+I1003 00:04:08.846387      19 manager.go:179] discovering host network devices
+I1003 00:04:08.883244      19 manager.go:209] discoverDevices(): device found: 0000:18:00.0	02          	Intel Corporation   	I350 Gigabit Network Connection         
+I1003 00:04:08.883563      19 manager.go:259] excluding interface eno1:  default route found: {Ifindex: 2 Dst: <nil> Src: <nil> Gw: 10.34.1.1 Flags: [] Table: 254}
+I1003 00:04:08.883593      19 manager.go:209] discoverDevices(): device found: 0000:18:00.1	02          	Intel Corporation   	I350 Gigabit Network Connection         
+I1003 00:04:08.883810      19 manager.go:279] eno2 added to linkWatchList
+I1003 00:04:08.883885      19 manager.go:209] discoverDevices(): device found: 0000:af:00.0	02          	Mellanox Technolo...	MT27800 Family [ConnectX-5]             
+I1003 00:04:08.884031      19 manager.go:259] excluding interface enp175s0:  default route found: {Ifindex: 4 Dst: <nil> Src: <nil> Gw: 192.168.10.1 Flags: [] Table: 254}
+I1003 00:04:08.884048      19 manager.go:209] discoverDevices(): device found: 0000:af:00.1	02          	Mellanox Technolo...	MT27800 Family [ConnectX-5 Virtual Fu...
+I1003 00:04:08.884629      19 manager.go:259] excluding interface enp175s0v0:  default route found: {Ifindex: 16 Dst: <nil> Src: <nil> Gw: 192.168.10.1 Flags: [] Table: 254}
+I1003 00:04:08.884645      19 manager.go:209] discoverDevices(): device found: 0000:af:00.2	02          	Mellanox Technolo...	MT27800 Family [ConnectX-5 Virtual Fu...
+I1003 00:04:08.885097      19 manager.go:259] excluding interface enp175s0v1:  default route found: {Ifindex: 17 Dst: <nil> Src: <nil> Gw: 192.168.10.1 Flags: [] Table: 254}
+I1003 00:04:08.885115      19 manager.go:209] discoverDevices(): device found: 0000:af:00.3	02          	Mellanox Technolo...	MT27800 Family [ConnectX-5 Virtual Fu...
+I1003 00:04:08.885752      19 manager.go:259] excluding interface enp175s0v2:  default route found: {Ifindex: 18 Dst: <nil> Src: <nil> Gw: 192.168.10.1 Flags: [] Table: 254}
+I1003 00:04:08.885764      19 manager.go:209] discoverDevices(): device found: 0000:af:00.4	02          	Mellanox Technolo...	MT27800 Family [ConnectX-5 Virtual Fu...
+I1003 00:04:08.886220      19 manager.go:259] excluding interface enp175s0v3:  default route found: {Ifindex: 19 Dst: <nil> Src: <nil> Gw: 192.168.10.1 Flags: [] Table: 254}
+I1003 00:04:08.886232      19 manager.go:209] discoverDevices(): device found: 0000:af:00.5	02          	Mellanox Technolo...	MT27800 Family [ConnectX-5 Virtual Fu...
+I1003 00:04:08.886691      19 manager.go:259] excluding interface enp175s0v4:  default route found: {Ifindex: 20 Dst: <nil> Src: <nil> Gw: 192.168.10.1 Flags: [] Table: 254}
+I1003 00:04:08.886702      19 manager.go:209] discoverDevices(): device found: 0000:af:00.6	02          	Mellanox Technolo...	MT27800 Family [ConnectX-5 Virtual Fu...
+I1003 00:04:08.887165      19 manager.go:259] excluding interface enp175s0v5:  default route found: {Ifindex: 21 Dst: <nil> Src: <nil> Gw: 192.168.10.1 Flags: [] Table: 254}
+I1003 00:04:08.887177      19 manager.go:209] discoverDevices(): device found: 0000:af:00.7	02          	Mellanox Technolo...	MT27800 Family [ConnectX-5 Virtual Fu...
+I1003 00:04:08.887618      19 manager.go:259] excluding interface enp175s0v6:  default route found: {Ifindex: 22 Dst: <nil> Src: <nil> Gw: 192.168.10.1 Flags: [] Table: 254}
+I1003 00:04:08.887629      19 manager.go:209] discoverDevices(): device found: 0000:af:01.0	02          	Mellanox Technolo...	MT27800 Family [ConnectX-5 Virtual Fu...
+I1003 00:04:08.888067      19 manager.go:259] excluding interface enp175s0v7:  default route found: {Ifindex: 23 Dst: <nil> Src: <nil> Gw: 192.168.10.1 Flags: [] Table: 254}
+I1003 00:04:08.888079      19 manager.go:209] discoverDevices(): device found: 0000:af:01.1	02          	Mellanox Technolo...	MT27800 Family [ConnectX-5 Virtual Fu...
+I1003 00:04:08.888515      19 manager.go:259] excluding interface enp175s0v8:  default route found: {Ifindex: 24 Dst: <nil> Src: <nil> Gw: 192.168.10.1 Flags: [] Table: 254}
+I1003 00:04:08.888528      19 manager.go:209] discoverDevices(): device found: 0000:af:01.2	02          	Mellanox Technolo...	MT27800 Family [ConnectX-5 Virtual Fu...
+I1003 00:04:08.889183      19 manager.go:259] excluding interface enp175s0v9:  default route found: {Ifindex: 25 Dst: <nil> Src: <nil> Gw: 192.168.10.1 Flags: [] Table: 254}
+I1003 00:04:08.889231      19 manager.go:209] discoverDevices(): device found: 0000:af:01.3	02          	Mellanox Technolo...	MT27800 Family [ConnectX-5 Virtual Fu...
+I1003 00:04:08.889684      19 manager.go:259] excluding interface enp175s0v10:  default route found: {Ifindex: 26 Dst: <nil> Src: <nil> Gw: 192.168.10.1 Flags: [] Table: 254}
+I1003 00:04:08.889695      19 manager.go:209] discoverDevices(): device found: 0000:af:01.4	02          	Mellanox Technolo...	MT27800 Family [ConnectX-5 Virtual Fu...
+I1003 00:04:08.890094      19 manager.go:259] excluding interface enp175s0v11:  default route found: {Ifindex: 27 Dst: <nil> Src: <nil> Gw: 192.168.10.1 Flags: [] Table: 254}
+I1003 00:04:08.890110      19 manager.go:209] discoverDevices(): device found: 0000:af:01.5	02          	Mellanox Technolo...	MT27800 Family [ConnectX-5 Virtual Fu...
+I1003 00:04:08.890546      19 manager.go:259] excluding interface enp175s0v12:  default route found: {Ifindex: 28 Dst: <nil> Src: <nil> Gw: 192.168.10.1 Flags: [] Table: 254}
+I1003 00:04:08.890558      19 manager.go:209] discoverDevices(): device found: 0000:af:01.6	02          	Mellanox Technolo...	MT27800 Family [ConnectX-5 Virtual Fu...
+I1003 00:04:08.890986      19 manager.go:259] excluding interface enp175s0v13:  default route found: {Ifindex: 29 Dst: <nil> Src: <nil> Gw: 192.168.10.1 Flags: [] Table: 254}
+I1003 00:04:08.890998      19 manager.go:209] discoverDevices(): device found: 0000:af:01.7	02          	Mellanox Technolo...	MT27800 Family [ConnectX-5 Virtual Fu...
+I1003 00:04:08.891471      19 manager.go:259] excluding interface enp175s0v14:  default route found: {Ifindex: 30 Dst: <nil> Src: <nil> Gw: 192.168.10.1 Flags: [] Table: 254}
+I1003 00:04:08.891483      19 manager.go:209] discoverDevices(): device found: 0000:af:02.0	02          	Mellanox Technolo...	MT27800 Family [ConnectX-5 Virtual Fu...
+I1003 00:04:08.891917      19 manager.go:259] excluding interface enp175s0v15:  default route found: {Ifindex: 31 Dst: <nil> Src: <nil> Gw: 192.168.10.1 Flags: [] Table: 254}
+I1003 00:04:08.891930      19 main.go:66] Initializing resource servers
+I1003 00:04:08.891933      19 manager.go:108] number of config: 1
+I1003 00:04:08.891935      19 manager.go:111] 
+I1003 00:04:08.891937      19 manager.go:112] Creating new ResourcePool: sriov
+I1003 00:04:08.891945      19 manager.go:125] New resource server is created for sriov ResourcePool
+I1003 00:04:08.891950      19 main.go:72] Starting all servers...
+I1003 00:04:08.892073      19 server.go:190] starting sriov device plugin endpoint at: sriov.sock
+I1003 00:04:08.892838      19 server.go:216] sriov device plugin endpoint started serving
+I1003 00:04:08.892858      19 main.go:77] All servers started.
+I1003 00:04:08.892866      19 main.go:78] Listening for term signals
+I1003 00:04:08.893890      19 server.go:105] Plugin: sriov.sock gets registered successfully at Kubelet
+I1003 00:04:08.893945      19 server.go:130] ListAndWatch(sriov) invoked
+I1003 00:04:08.893953      19 server.go:138] ListAndWatch(sriov): send devices &ListAndWatchResponse{Devices:[],}

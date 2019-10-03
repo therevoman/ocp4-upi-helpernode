@@ -1,0 +1,26 @@
+apiVersion: sriovnetwork.openshift.io/v1
+kind: SriovNetworkNodePolicy
+metadata:
+  creationTimestamp: "2019-09-24T16:52:08Z"
+  generation: 2
+  name: policy-example
+  namespace: sriov-network-operator
+  resourceVersion: "4752348"
+  selfLink: /apis/sriovnetwork.openshift.io/v1/namespaces/sriov-network-operator/sriovnetworknodepolicies/policy-example
+  uid: a53cc758-deeb-11e9-85cb-0cc47a6a5d1c
+spec:
+  deviceType: netdevice
+  isRdma: true
+  mtu: 4200
+  nicSelector:
+    deviceID: "1018"
+    pfName:
+    - enp175s0
+    rootDevices:
+    - 0000:af:00.0
+    vendor: 15b3
+  nodeSelector:
+    feature.node.kubernetes.io/sriov-capable: "true"
+  numVfs: 16
+  priority: 10
+  resourceName: sriov

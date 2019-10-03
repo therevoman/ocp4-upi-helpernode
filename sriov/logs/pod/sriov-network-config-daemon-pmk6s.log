@@ -1,0 +1,607 @@
+I1003 00:03:06.323252    3698 start.go:44] Version: 0.0.1
+I1003 00:03:06.334204    3698 start.go:91] starting node writer
+I1003 00:03:06.334223    3698 start.go:95] Starting SriovNetworkConfigDaemon
+I1003 00:03:06.334230    3698 daemon.go:87] Run(): start daemon
+I1003 00:03:06.334233    3698 daemon.go:465] tryEnableRdma()
+I1003 00:03:06.334302    3698 writer.go:34] Run(): start writer
+I1003 00:03:06.334324    3698 writer.go:67] pollNicStatus()
+I1003 00:03:06.336222    3698 utils.go:35] DiscoverSriovDevices
+I1003 00:03:06.375933    3698 daemon.go:475] tryEnableRdma(): It's CoreOS, exit
+RDMA kernel modules loaded
+I1003 00:03:06.400717    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:18:00.0
+I1003 00:03:06.400780    3698 utils.go:257] tryGetInterfaceName(): name is eno1
+I1003 00:03:06.400914    3698 utils.go:257] tryGetInterfaceName(): name is eno1
+I1003 00:03:06.400991    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:18:00.1
+I1003 00:03:06.401021    3698 utils.go:257] tryGetInterfaceName(): name is eno2
+I1003 00:03:06.401060    3698 utils.go:257] tryGetInterfaceName(): name is eno2
+I1003 00:03:06.401146    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.0
+I1003 00:03:06.401176    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0
+I1003 00:03:06.401218    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0
+W1003 00:03:06.813592    3698 writer.go:120] Failed to fetch node computenode1.ocp4.kla-tencor.com (Get https://172.30.0.1:443/apis/sriovnetwork.openshift.io/v1/namespaces/sriov-network-operator/sriovnetworknodestates/computenode1.ocp4.kla-tencor.com: tls: server selected unsupported protocol version 301); retrying...
+I1003 00:03:11.385830    3698 daemon.go:130] nodeStateAddHandler(): New SriovNetworkNodeState Added to Store: computenode1.ocp4.kla-tencor.com
+I1003 00:03:16.821519    3698 writer.go:107] setNodeStateStatus(): syncStatus: , lastSyncError: 
+I1003 00:03:16.821542    3698 writer.go:47] Run(): refresh trigger
+I1003 00:03:16.821544    3698 writer.go:67] pollNicStatus()
+I1003 00:03:16.821548    3698 utils.go:35] DiscoverSriovDevices
+I1003 00:03:16.821644    3698 daemon.go:456] registerPlugins(): [intel_plugin mellanox_plugin]
+I1003 00:03:16.821663    3698 daemon.go:358] loadVendorPlugins(): try to load plugin intel_plugin
+I1003 00:03:16.821667    3698 plugin.go:36] loadPlugin(): load plugin from /plugins/intel_plugin.so
+I1003 00:03:16.855833    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:18:00.0
+I1003 00:03:16.855879    3698 utils.go:257] tryGetInterfaceName(): name is eno1
+I1003 00:03:16.855920    3698 utils.go:257] tryGetInterfaceName(): name is eno1
+I1003 00:03:16.855978    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:18:00.1
+I1003 00:03:16.856001    3698 utils.go:257] tryGetInterfaceName(): name is eno2
+I1003 00:03:16.856034    3698 utils.go:257] tryGetInterfaceName(): name is eno2
+I1003 00:03:16.856099    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.0
+I1003 00:03:16.856127    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0
+I1003 00:03:16.856175    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0
+I1003 00:03:16.862010    3698 writer.go:107] setNodeStateStatus(): syncStatus: InProgress, lastSyncError: 
+I1003 00:03:16.893313    3698 daemon.go:358] loadVendorPlugins(): try to load plugin mellanox_plugin
+I1003 00:03:16.893325    3698 plugin.go:36] loadPlugin(): load plugin from /plugins/mellanox_plugin.so
+I1003 00:03:16.939057    3698 daemon.go:358] loadVendorPlugins(): try to load plugin generic_plugin
+I1003 00:03:16.939069    3698 plugin.go:36] loadPlugin(): load plugin from /plugins/generic_plugin.so
+I1003 00:03:17.008033    3698 generic_plugin.go:55] generic-plugin OnNodeStateAdd()
+I1003 00:03:17.011086    3698 intel_plugin.go:37] intel-plugin OnNodeStateAdd()
+I1003 00:03:17.014488    3698 mellanox_plugin.go:62] mellanox-plugin OnNodeStateAdd()
+I1003 00:03:17.015589    3698 mellanox_plugin.go:69] mellanox-Plugin OnNodeStateChange()
+I1003 00:03:17.016337    3698 mellanox_plugin.go:265] mellanox-plugin isMlnxNicAndInNode(): device 0000:af:00.0
+I1003 00:03:17.016357    3698 mellanox_plugin.go:179] mellanox-plugin getMlnxNicFwData(): device 0000:af:00.0
+I1003 00:03:17.016368    3698 mellanox_plugin.go:260] mellanox-plugin isFirstPort(): device 0000:af:00.0
+I1003 00:03:17.016380    3698 mellanox_plugin.go:158] mellanox-plugin mstConfigReadData(): device 0000:af:00.0
+I1003 00:03:17.016454    3698 mellanox_plugin.go:165] mellanox-plugin runCommand(): mstconfig [-e -d 0000:af:00.0 q]
+I1003 00:03:17.017605    3698 mellanox_plugin.go:172] mellanox-plugin: runCommand(): mstconfig, [-e -d 0000:af:00.0 q]
+I1003 00:03:20.979898    3698 mellanox_plugin.go:174] mellanox-plugin: runCommand(): 
+Device #1:
+----------
+
+Device type:    ConnectX5       
+Name:           MCX555A-ECA_Ax  
+Description:    ConnectX-5 VPI adapter card; EDR IB (100Gb/s) and 100GbE; single-port QSFP28; PCIe3.0 x16; tall bracket; ROHS R6
+Device:         0000:af:00.0    
+
+Configurations:                              Default         Current         Next Boot
+         MEMIC_BAR_SIZE                      0               0               0               
+         MEMIC_SIZE_LIMIT                    _256KB(1)       _256KB(1)       _256KB(1)       
+         HOST_CHAINING_MODE                  DISABLED(0)     DISABLED(0)     DISABLED(0)     
+         HOST_CHAINING_DESCRIPTORS           Array[0..7]     Array[0..7]     Array[0..7]     
+         HOST_CHAINING_TOTAL_BUFFER_SIZE     Array[0..7]     Array[0..7]     Array[0..7]     
+         FLEX_PARSER_PROFILE_ENABLE          0               0               0               
+         FLEX_IPV4_OVER_VXLAN_PORT           0               0               0               
+         ROCE_NEXT_PROTOCOL                  254             254             254             
+         ESWITCH_HAIRPIN_DESCRIPTORS         Array[0..7]     Array[0..7]     Array[0..7]     
+         ESWITCH_HAIRPIN_TOT_BUFFER_SIZE     Array[0..7]     Array[0..7]     Array[0..7]     
+         PF_BAR2_SIZE                        0               0               0               
+         NON_PREFETCHABLE_PF_BAR             False(0)        False(0)        False(0)        
+         VF_NODNIC_ENABLE                    False(0)        False(0)        False(0)        
+*        NUM_OF_VFS                          0               16              16              
+         PF_BAR2_ENABLE                      False(0)        False(0)        False(0)        
+*        SRIOV_EN                            False(0)        True(1)         True(1)         
+         PF_LOG_BAR_SIZE                     5               5               5               
+         VF_LOG_BAR_SIZE                     1               1               1               
+         NUM_PF_MSIX                         63              63              63              
+         NUM_VF_MSIX                         19              19              19              
+         INT_LOG_MAX_PAYLOAD_SIZE            AUTOMATIC(0)    AUTOMATIC(0)    AUTOMATIC(0)    
+         PARTIAL_RESET_EN                    False(0)        False(0)        False(0)        
+         SW_RECOVERY_ON_ERRORS               False(0)        False(0)        False(0)        
+         RESET_WITH_HOST_ON_ERRORS           False(0)        False(0)        False(0)        
+         ADVANCED_POWER_SETTINGS             False(0)        False(0)        False(0)        
+         CQE_COMPRESSION                     BALANCED(0)     BALANCED(0)     BALANCED(0)     
+         IP_OVER_VXLAN_EN                    False(0)        False(0)        False(0)        
+         ESWITCH_IPV4_TTL_MODIFY_ENABLE      False(0)        False(0)        False(0)        
+         UCTX_EN                             False(0)        False(0)        False(0)        
+         PCI_ATOMIC_MODE                     PCI_ATOMIC_DISABLED_EXT_ATOMIC_ENABLED(0)PCI_ATOMIC_DISABLED_EXT_ATOMIC_ENABLED(0)PCI_ATOMIC_DISABLED_EXT_ATOMIC_ENABLED(0)
+         LRO_LOG_TIMEOUT0                    6               6               6               
+         LRO_LOG_TIMEOUT1                    7               7               7               
+         LRO_LOG_TIMEOUT2                    8               8               8               
+         LRO_LOG_TIMEOUT3                    13              13              13              
+         LOG_DCR_HASH_TABLE_SIZE             11              11              11              
+         DCR_LIFO_SIZE                       16384           16384           16384           
+*        LINK_TYPE_P1                        IB(1)           ETH(2)          ETH(2)          
+         ROCE_CC_PRIO_MASK_P1                255             255             255             
+         ROCE_CC_ALGORITHM_P1                ECN(0)          ECN(0)          ECN(0)          
+         CLAMP_TGT_RATE_AFTER_TIME_INC_P1    True(1)         True(1)         True(1)         
+         CLAMP_TGT_RATE_P1                   False(0)        False(0)        False(0)        
+         RPG_TIME_RESET_P1                   300             300             300             
+         RPG_BYTE_RESET_P1                   32767           32767           32767           
+         RPG_THRESHOLD_P1                    1               1               1               
+         RPG_MAX_RATE_P1                     0               0               0               
+         RPG_AI_RATE_P1                      5               5               5               
+         RPG_HAI_RATE_P1                     50              50              50              
+         RPG_GD_P1                           11              11              11              
+         RPG_MIN_DEC_FAC_P1                  50              50              50              
+         RPG_MIN_RATE_P1                     1               1               1               
+         RATE_TO_SET_ON_FIRST_CNP_P1         0               0               0               
+         DCE_TCP_G_P1                        1019            1019            1019            
+         DCE_TCP_RTT_P1                      1               1               1               
+         RATE_REDUCE_MONITOR_PERIOD_P1       4               4               4               
+         INITIAL_ALPHA_VALUE_P1              1023            1023            1023            
+         MIN_TIME_BETWEEN_CNPS_P1            0               0               0               
+         CNP_802P_PRIO_P1                    6               6               6               
+         CNP_DSCP_P1                         48              48              48              
+         LLDP_NB_DCBX_P1                     False(0)        False(0)        False(0)        
+         LLDP_NB_RX_MODE_P1                  OFF(0)          OFF(0)          OFF(0)          
+         LLDP_NB_TX_MODE_P1                  OFF(0)          OFF(0)          OFF(0)          
+         DCBX_IEEE_P1                        True(1)         True(1)         True(1)         
+         DCBX_CEE_P1                         True(1)         True(1)         True(1)         
+         DCBX_WILLING_P1                     True(1)         True(1)         True(1)         
+         KEEP_ETH_LINK_UP_P1                 True(1)         True(1)         True(1)         
+         KEEP_IB_LINK_UP_P1                  False(0)        False(0)        False(0)        
+         KEEP_LINK_UP_ON_BOOT_P1             False(0)        False(0)        False(0)        
+         KEEP_LINK_UP_ON_STANDBY_P1          False(0)        False(0)        False(0)        
+         NUM_OF_VL_P1                        _4_VLs(3)       _4_VLs(3)       _4_VLs(3)       
+         NUM_OF_TC_P1                        _8_TCs(0)       _8_TCs(0)       _8_TCs(0)       
+         NUM_OF_PFC_P1                       8               8               8               
+         DUP_MAC_ACTION_P1                   LAST_CFG(0)     LAST_CFG(0)     LAST_CFG(0)     
+         SRIOV_IB_ROUTING_MODE_P1            LID(1)          LID(1)          LID(1)          
+         IB_ROUTING_MODE_P1                  LID(1)          LID(1)          LID(1)          
+         PCI_WR_ORDERING                     per_mkey(0)     per_mkey(0)     per_mkey(0)     
+         MULTI_PORT_VHCA_EN                  False(0)        False(0)        False(0)        
+         PORT_OWNER                          True(1)         True(1)         True(1)         
+         ALLOW_RD_COUNTERS                   True(1)         True(1)         True(1)         
+         RENEG_ON_CHANGE                     True(1)         True(1)         True(1)         
+         TRACER_ENABLE                       True(1)         True(1)         True(1)         
+         IP_VER                              IPv4(0)         IPv4(0)         IPv4(0)         
+         BOOT_UNDI_NETWORK_WAIT              0               0               0               
+         UEFI_HII_EN                         False(0)        False(0)        False(0)        
+         BOOT_DBG_LOG                        False(0)        False(0)        False(0)        
+         UEFI_LOGS                           DISABLED(0)     DISABLED(0)     DISABLED(0)     
+         BOOT_VLAN                           1               1               1               
+         LEGACY_BOOT_PROTOCOL                PXE(1)          PXE(1)          PXE(1)          
+         BOOT_RETRY_CNT                      NONE(0)         NONE(0)         NONE(0)         
+         BOOT_LACP_DIS                       True(1)         True(1)         True(1)         
+         BOOT_VLAN_EN                        False(0)        False(0)        False(0)        
+         BOOT_PKEY                           0               0               0               
+         EXP_ROM_UEFI_x86_ENABLE             False(0)        False(0)        False(0)        
+         EXP_ROM_PXE_ENABLE                  True(1)         True(1)         True(1)         
+         IBM_TUNNELED_ATOMIC_EN              False(0)        False(0)        False(0)        
+         IBM_AS_NOTIFY_EN                    False(0)        False(0)        False(0)        
+         ADVANCED_PCI_SETTINGS               False(0)        False(0)        False(0)        
+         SAFE_MODE_THRESHOLD                 10              10              10              
+         SAFE_MODE_ENABLE                    True(1)         True(1)         True(1)         
+The '*' shows parameters with next value different from default/current value.
+I1003 00:03:20.979994    3698 mellanox_plugin.go:241] mellanox-plugin parseMstconfigOutput(): Attributes [NUM_OF_VFS SRIOV_EN LINK_TYPE_P1]
+I1003 00:03:20.980261    3698 mellanox_plugin.go:208] mellanox-plugin mlnxNicFromMap() map[NUM_OF_VFS:16 SRIOV_EN:True(1) LINK_TYPE_P1:ETH(2)], true
+I1003 00:03:20.980274    3698 mellanox_plugin.go:208] mellanox-plugin mlnxNicFromMap() map[NUM_OF_VFS:16 SRIOV_EN:True(1) LINK_TYPE_P1:ETH(2)], true
+I1003 00:03:20.980280    3698 mellanox_plugin.go:265] mellanox-plugin isMlnxNicAndInNode(): device 0000:af:00.0
+I1003 00:03:20.980283    3698 mellanox_plugin.go:179] mellanox-plugin getMlnxNicFwData(): device 0000:af:00.0
+I1003 00:03:20.980286    3698 mellanox_plugin.go:260] mellanox-plugin isFirstPort(): device 0000:af:00.0
+I1003 00:03:20.980289    3698 mellanox_plugin.go:158] mellanox-plugin mstConfigReadData(): device 0000:af:00.0
+I1003 00:03:20.980292    3698 mellanox_plugin.go:165] mellanox-plugin runCommand(): mstconfig [-e -d 0000:af:00.0 q]
+I1003 00:03:20.980365    3698 mellanox_plugin.go:172] mellanox-plugin: runCommand(): mstconfig, [-e -d 0000:af:00.0 q]
+I1003 00:03:24.878267    3698 mellanox_plugin.go:174] mellanox-plugin: runCommand(): 
+Device #1:
+----------
+
+Device type:    ConnectX5       
+Name:           MCX555A-ECA_Ax  
+Description:    ConnectX-5 VPI adapter card; EDR IB (100Gb/s) and 100GbE; single-port QSFP28; PCIe3.0 x16; tall bracket; ROHS R6
+Device:         0000:af:00.0    
+
+Configurations:                              Default         Current         Next Boot
+         MEMIC_BAR_SIZE                      0               0               0               
+         MEMIC_SIZE_LIMIT                    _256KB(1)       _256KB(1)       _256KB(1)       
+         HOST_CHAINING_MODE                  DISABLED(0)     DISABLED(0)     DISABLED(0)     
+         HOST_CHAINING_DESCRIPTORS           Array[0..7]     Array[0..7]     Array[0..7]     
+         HOST_CHAINING_TOTAL_BUFFER_SIZE     Array[0..7]     Array[0..7]     Array[0..7]     
+         FLEX_PARSER_PROFILE_ENABLE          0               0               0               
+         FLEX_IPV4_OVER_VXLAN_PORT           0               0               0               
+         ROCE_NEXT_PROTOCOL                  254             254             254             
+         ESWITCH_HAIRPIN_DESCRIPTORS         Array[0..7]     Array[0..7]     Array[0..7]     
+         ESWITCH_HAIRPIN_TOT_BUFFER_SIZE     Array[0..7]     Array[0..7]     Array[0..7]     
+         PF_BAR2_SIZE                        0               0               0               
+         NON_PREFETCHABLE_PF_BAR             False(0)        False(0)        False(0)        
+         VF_NODNIC_ENABLE                    False(0)        False(0)        False(0)        
+*        NUM_OF_VFS                          0               16              16              
+         PF_BAR2_ENABLE                      False(0)        False(0)        False(0)        
+*        SRIOV_EN                            False(0)        True(1)         True(1)         
+         PF_LOG_BAR_SIZE                     5               5               5               
+         VF_LOG_BAR_SIZE                     1               1               1               
+         NUM_PF_MSIX                         63              63              63              
+         NUM_VF_MSIX                         19              19              19              
+         INT_LOG_MAX_PAYLOAD_SIZE            AUTOMATIC(0)    AUTOMATIC(0)    AUTOMATIC(0)    
+         PARTIAL_RESET_EN                    False(0)        False(0)        False(0)        
+         SW_RECOVERY_ON_ERRORS               False(0)        False(0)        False(0)        
+         RESET_WITH_HOST_ON_ERRORS           False(0)        False(0)        False(0)        
+         ADVANCED_POWER_SETTINGS             False(0)        False(0)        False(0)        
+         CQE_COMPRESSION                     BALANCED(0)     BALANCED(0)     BALANCED(0)     
+         IP_OVER_VXLAN_EN                    False(0)        False(0)        False(0)        
+         ESWITCH_IPV4_TTL_MODIFY_ENABLE      False(0)        False(0)        False(0)        
+         UCTX_EN                             False(0)        False(0)        False(0)        
+         PCI_ATOMIC_MODE                     PCI_ATOMIC_DISABLED_EXT_ATOMIC_ENABLED(0)PCI_ATOMIC_DISABLED_EXT_ATOMIC_ENABLED(0)PCI_ATOMIC_DISABLED_EXT_ATOMIC_ENABLED(0)
+         LRO_LOG_TIMEOUT0                    6               6               6               
+         LRO_LOG_TIMEOUT1                    7               7               7               
+         LRO_LOG_TIMEOUT2                    8               8               8               
+         LRO_LOG_TIMEOUT3                    13              13              13              
+         LOG_DCR_HASH_TABLE_SIZE             11              11              11              
+         DCR_LIFO_SIZE                       16384           16384           16384           
+*        LINK_TYPE_P1                        IB(1)           ETH(2)          ETH(2)          
+         ROCE_CC_PRIO_MASK_P1                255             255             255             
+         ROCE_CC_ALGORITHM_P1                ECN(0)          ECN(0)          ECN(0)          
+         CLAMP_TGT_RATE_AFTER_TIME_INC_P1    True(1)         True(1)         True(1)         
+         CLAMP_TGT_RATE_P1                   False(0)        False(0)        False(0)        
+         RPG_TIME_RESET_P1                   300             300             300             
+         RPG_BYTE_RESET_P1                   32767           32767           32767           
+         RPG_THRESHOLD_P1                    1               1               1               
+         RPG_MAX_RATE_P1                     0               0               0               
+         RPG_AI_RATE_P1                      5               5               5               
+         RPG_HAI_RATE_P1                     50              50              50              
+         RPG_GD_P1                           11              11              11              
+         RPG_MIN_DEC_FAC_P1                  50              50              50              
+         RPG_MIN_RATE_P1                     1               1               1               
+         RATE_TO_SET_ON_FIRST_CNP_P1         0               0               0               
+         DCE_TCP_G_P1                        1019            1019            1019            
+         DCE_TCP_RTT_P1                      1               1               1               
+         RATE_REDUCE_MONITOR_PERIOD_P1       4               4               4               
+         INITIAL_ALPHA_VALUE_P1              1023            1023            1023            
+         MIN_TIME_BETWEEN_CNPS_P1            0               0               0               
+         CNP_802P_PRIO_P1                    6               6               6               
+         CNP_DSCP_P1                         48              48              48              
+         LLDP_NB_DCBX_P1                     False(0)        False(0)        False(0)        
+         LLDP_NB_RX_MODE_P1                  OFF(0)          OFF(0)          OFF(0)          
+         LLDP_NB_TX_MODE_P1                  OFF(0)          OFF(0)          OFF(0)          
+         DCBX_IEEE_P1                        True(1)         True(1)         True(1)         
+         DCBX_CEE_P1                         True(1)         True(1)         True(1)         
+         DCBX_WILLING_P1                     True(1)         True(1)         True(1)         
+         KEEP_ETH_LINK_UP_P1                 True(1)         True(1)         True(1)         
+         KEEP_IB_LINK_UP_P1                  False(0)        False(0)        False(0)        
+         KEEP_LINK_UP_ON_BOOT_P1             False(0)        False(0)        False(0)        
+         KEEP_LINK_UP_ON_STANDBY_P1          False(0)        False(0)        False(0)        
+         NUM_OF_VL_P1                        _4_VLs(3)       _4_VLs(3)       _4_VLs(3)       
+         NUM_OF_TC_P1                        _8_TCs(0)       _8_TCs(0)       _8_TCs(0)       
+         NUM_OF_PFC_P1                       8               8               8               
+         DUP_MAC_ACTION_P1                   LAST_CFG(0)     LAST_CFG(0)     LAST_CFG(0)     
+         SRIOV_IB_ROUTING_MODE_P1            LID(1)          LID(1)          LID(1)          
+         IB_ROUTING_MODE_P1                  LID(1)          LID(1)          LID(1)          
+         PCI_WR_ORDERING                     per_mkey(0)     per_mkey(0)     per_mkey(0)     
+         MULTI_PORT_VHCA_EN                  False(0)        False(0)        False(0)        
+         PORT_OWNER                          True(1)         True(1)         True(1)         
+         ALLOW_RD_COUNTERS                   True(1)         True(1)         True(1)         
+         RENEG_ON_CHANGE                     True(1)         True(1)         True(1)         
+         TRACER_ENABLE                       True(1)         True(1)         True(1)         
+         IP_VER                              IPv4(0)         IPv4(0)         IPv4(0)         
+         BOOT_UNDI_NETWORK_WAIT              0               0               0               
+         UEFI_HII_EN                         False(0)        False(0)        False(0)        
+         BOOT_DBG_LOG                        False(0)        False(0)        False(0)        
+         UEFI_LOGS                           DISABLED(0)     DISABLED(0)     DISABLED(0)     
+         BOOT_VLAN                           1               1               1               
+         LEGACY_BOOT_PROTOCOL                PXE(1)          PXE(1)          PXE(1)          
+         BOOT_RETRY_CNT                      NONE(0)         NONE(0)         NONE(0)         
+         BOOT_LACP_DIS                       True(1)         True(1)         True(1)         
+         BOOT_VLAN_EN                        False(0)        False(0)        False(0)        
+         BOOT_PKEY                           0               0               0               
+         EXP_ROM_UEFI_x86_ENABLE             False(0)        False(0)        False(0)        
+         EXP_ROM_PXE_ENABLE                  True(1)         True(1)         True(1)         
+         IBM_TUNNELED_ATOMIC_EN              False(0)        False(0)        False(0)        
+         IBM_AS_NOTIFY_EN                    False(0)        False(0)        False(0)        
+         ADVANCED_PCI_SETTINGS               False(0)        False(0)        False(0)        
+         SAFE_MODE_THRESHOLD                 10              10              10              
+         SAFE_MODE_ENABLE                    True(1)         True(1)         True(1)         
+The '*' shows parameters with next value different from default/current value.
+I1003 00:03:24.878336    3698 mellanox_plugin.go:241] mellanox-plugin parseMstconfigOutput(): Attributes [NUM_OF_VFS SRIOV_EN LINK_TYPE_P1]
+I1003 00:03:24.878515    3698 mellanox_plugin.go:208] mellanox-plugin mlnxNicFromMap() map[NUM_OF_VFS:16 SRIOV_EN:True(1) LINK_TYPE_P1:ETH(2)], true
+I1003 00:03:24.878523    3698 mellanox_plugin.go:208] mellanox-plugin mlnxNicFromMap() map[NUM_OF_VFS:16 SRIOV_EN:True(1) LINK_TYPE_P1:ETH(2)], true
+I1003 00:03:24.878529    3698 mellanox_plugin.go:115] mellanox-plugin needDrain false needReboot false
+I1003 00:03:24.878539    3698 daemon.go:155] nodeStateAddHandler(): reqDrain true, reqReboot false
+I1003 00:03:24.878547    3698 daemon.go:158] nodeStateAddHandler(): drain node
+I1003 00:03:24.878551    3698 daemon.go:394] drainNode(): Update prepared; beginning drain
+I1003 00:03:25.319372    3698 daemon.go:426] drainNode(): drain complete
+I1003 00:03:25.319389    3698 intel_plugin.go:49] intel-plugin Apply()
+I1003 00:03:25.319404    3698 mellanox_plugin.go:121] mellanox-plugin Apply()
+I1003 00:03:25.319410    3698 mellanox_plugin.go:126] mellanox-plugin configFW()
+I1003 00:03:25.319423    3698 generic_plugin.go:124] generic-plugin Apply(): desiredState={721b0aa257d2c6530aa797eed75e52f4 [{0000:af:00.0 16 4200 netdevice} {0000:af:00.0 16 4200 netdevice}]}
+I1003 00:03:25.320030    3698 utils.go:147] configSriovDevice(): config interface 0000:af:00.0 with &{0000:af:00.0 16 4200 netdevice}
+I1003 00:03:25.320059    3698 utils.go:215] setSriovNumVfs(): set NumVfs for device 0000:af:00.0
+I1003 00:03:32.025695    3698 driver.go:72] BindDefaultDriver(): bind device 0000:af:00.1 to default driver
+I1003 00:03:32.025720    3698 driver.go:105] hasDriver(): device 0000:af:00.1 driver is mlx5_core
+I1003 00:03:32.025725    3698 driver.go:76] BindDefaultDriver(): device 0000:af:00.1 already bound to default driver mlx5_core
+I1003 00:03:32.025733    3698 driver.go:72] BindDefaultDriver(): bind device 0000:af:00.2 to default driver
+I1003 00:03:32.025743    3698 driver.go:105] hasDriver(): device 0000:af:00.2 driver is mlx5_core
+I1003 00:03:32.025746    3698 driver.go:76] BindDefaultDriver(): device 0000:af:00.2 already bound to default driver mlx5_core
+I1003 00:03:32.025749    3698 driver.go:72] BindDefaultDriver(): bind device 0000:af:01.3 to default driver
+I1003 00:03:32.025759    3698 driver.go:105] hasDriver(): device 0000:af:01.3 driver is mlx5_core
+I1003 00:03:32.025762    3698 driver.go:76] BindDefaultDriver(): device 0000:af:01.3 already bound to default driver mlx5_core
+I1003 00:03:32.025765    3698 driver.go:72] BindDefaultDriver(): bind device 0000:af:01.4 to default driver
+I1003 00:03:32.025775    3698 driver.go:105] hasDriver(): device 0000:af:01.4 driver is mlx5_core
+I1003 00:03:32.025778    3698 driver.go:76] BindDefaultDriver(): device 0000:af:01.4 already bound to default driver mlx5_core
+I1003 00:03:32.025781    3698 driver.go:72] BindDefaultDriver(): bind device 0000:af:01.5 to default driver
+I1003 00:03:32.025791    3698 driver.go:105] hasDriver(): device 0000:af:01.5 driver is mlx5_core
+I1003 00:03:32.025794    3698 driver.go:76] BindDefaultDriver(): device 0000:af:01.5 already bound to default driver mlx5_core
+I1003 00:03:32.025797    3698 driver.go:72] BindDefaultDriver(): bind device 0000:af:01.6 to default driver
+I1003 00:03:32.025807    3698 driver.go:105] hasDriver(): device 0000:af:01.6 driver is mlx5_core
+I1003 00:03:32.025812    3698 driver.go:76] BindDefaultDriver(): device 0000:af:01.6 already bound to default driver mlx5_core
+I1003 00:03:32.025815    3698 driver.go:72] BindDefaultDriver(): bind device 0000:af:01.7 to default driver
+I1003 00:03:32.025825    3698 driver.go:105] hasDriver(): device 0000:af:01.7 driver is mlx5_core
+I1003 00:03:32.025828    3698 driver.go:76] BindDefaultDriver(): device 0000:af:01.7 already bound to default driver mlx5_core
+I1003 00:03:32.025831    3698 driver.go:72] BindDefaultDriver(): bind device 0000:af:02.0 to default driver
+I1003 00:03:32.025840    3698 driver.go:105] hasDriver(): device 0000:af:02.0 driver is mlx5_core
+I1003 00:03:32.025845    3698 driver.go:76] BindDefaultDriver(): device 0000:af:02.0 already bound to default driver mlx5_core
+I1003 00:03:32.025848    3698 driver.go:72] BindDefaultDriver(): bind device 0000:af:00.3 to default driver
+I1003 00:03:32.025858    3698 driver.go:105] hasDriver(): device 0000:af:00.3 driver is mlx5_core
+I1003 00:03:32.025864    3698 driver.go:76] BindDefaultDriver(): device 0000:af:00.3 already bound to default driver mlx5_core
+I1003 00:03:32.025867    3698 driver.go:72] BindDefaultDriver(): bind device 0000:af:00.4 to default driver
+I1003 00:03:32.025876    3698 driver.go:105] hasDriver(): device 0000:af:00.4 driver is mlx5_core
+I1003 00:03:32.025879    3698 driver.go:76] BindDefaultDriver(): device 0000:af:00.4 already bound to default driver mlx5_core
+I1003 00:03:32.025882    3698 driver.go:72] BindDefaultDriver(): bind device 0000:af:00.5 to default driver
+I1003 00:03:32.025892    3698 driver.go:105] hasDriver(): device 0000:af:00.5 driver is mlx5_core
+I1003 00:03:32.025898    3698 driver.go:76] BindDefaultDriver(): device 0000:af:00.5 already bound to default driver mlx5_core
+I1003 00:03:32.025901    3698 driver.go:72] BindDefaultDriver(): bind device 0000:af:00.6 to default driver
+I1003 00:03:32.025910    3698 driver.go:105] hasDriver(): device 0000:af:00.6 driver is mlx5_core
+I1003 00:03:32.025913    3698 driver.go:76] BindDefaultDriver(): device 0000:af:00.6 already bound to default driver mlx5_core
+I1003 00:03:32.025916    3698 driver.go:72] BindDefaultDriver(): bind device 0000:af:00.7 to default driver
+I1003 00:03:32.025926    3698 driver.go:105] hasDriver(): device 0000:af:00.7 driver is mlx5_core
+I1003 00:03:32.025930    3698 driver.go:76] BindDefaultDriver(): device 0000:af:00.7 already bound to default driver mlx5_core
+I1003 00:03:32.025933    3698 driver.go:72] BindDefaultDriver(): bind device 0000:af:01.0 to default driver
+I1003 00:03:32.025942    3698 driver.go:105] hasDriver(): device 0000:af:01.0 driver is mlx5_core
+I1003 00:03:32.025945    3698 driver.go:76] BindDefaultDriver(): device 0000:af:01.0 already bound to default driver mlx5_core
+I1003 00:03:32.025948    3698 driver.go:72] BindDefaultDriver(): bind device 0000:af:01.1 to default driver
+I1003 00:03:32.025958    3698 driver.go:105] hasDriver(): device 0000:af:01.1 driver is mlx5_core
+I1003 00:03:32.025962    3698 driver.go:76] BindDefaultDriver(): device 0000:af:01.1 already bound to default driver mlx5_core
+I1003 00:03:32.025965    3698 driver.go:72] BindDefaultDriver(): bind device 0000:af:01.2 to default driver
+I1003 00:03:32.025974    3698 driver.go:105] hasDriver(): device 0000:af:01.2 driver is mlx5_core
+I1003 00:03:32.025977    3698 driver.go:76] BindDefaultDriver(): device 0000:af:01.2 already bound to default driver mlx5_core
+I1003 00:03:32.025981    3698 utils.go:232] setNetdevMTU(): set MTU for device 0000:af:00.0
+I1003 00:03:32.737175    3698 utils.go:232] setNetdevMTU(): set MTU for device 0000:af:00.1
+I1003 00:03:32.941870    3698 utils.go:232] setNetdevMTU(): set MTU for device 0000:af:00.2
+I1003 00:03:33.160968    3698 utils.go:232] setNetdevMTU(): set MTU for device 0000:af:01.3
+I1003 00:03:33.341423    3698 utils.go:232] setNetdevMTU(): set MTU for device 0000:af:01.4
+I1003 00:03:33.627643    3698 utils.go:232] setNetdevMTU(): set MTU for device 0000:af:01.5
+I1003 00:03:33.827601    3698 utils.go:232] setNetdevMTU(): set MTU for device 0000:af:01.6
+I1003 00:03:34.024639    3698 utils.go:232] setNetdevMTU(): set MTU for device 0000:af:01.7
+I1003 00:03:34.224456    3698 utils.go:232] setNetdevMTU(): set MTU for device 0000:af:02.0
+I1003 00:03:34.422747    3698 utils.go:232] setNetdevMTU(): set MTU for device 0000:af:00.3
+I1003 00:03:34.620655    3698 utils.go:232] setNetdevMTU(): set MTU for device 0000:af:00.4
+I1003 00:03:34.806799    3698 utils.go:232] setNetdevMTU(): set MTU for device 0000:af:00.5
+I1003 00:03:35.002395    3698 utils.go:232] setNetdevMTU(): set MTU for device 0000:af:00.6
+I1003 00:03:35.199607    3698 utils.go:232] setNetdevMTU(): set MTU for device 0000:af:00.7
+I1003 00:03:35.400278    3698 utils.go:232] setNetdevMTU(): set MTU for device 0000:af:01.0
+I1003 00:03:35.598728    3698 utils.go:232] setNetdevMTU(): set MTU for device 0000:af:01.1
+I1003 00:03:35.774762    3698 utils.go:232] setNetdevMTU(): set MTU for device 0000:af:01.2
+I1003 00:03:35.973097    3698 daemon.go:312] restartDevicePluginPod(): try to restart device plugin pod
+I1003 00:03:35.979885    3698 daemon.go:322] restartDevicePluginPod(): Found device plugin pod sriov-device-plugin-ghrr6
+I1003 00:03:35.990970    3698 daemon.go:341] restartDevicePluginPod(): waiting for pod get deleted
+I1003 00:03:38.994343    3698 daemon.go:341] restartDevicePluginPod(): waiting for pod get deleted
+I1003 00:03:41.994574    3698 daemon.go:341] restartDevicePluginPod(): waiting for pod get deleted
+I1003 00:03:44.994802    3698 daemon.go:341] restartDevicePluginPod(): waiting for pod get deleted
+I1003 00:03:46.862265    3698 writer.go:57] Run(): period refresh
+I1003 00:03:46.862302    3698 writer.go:67] pollNicStatus()
+I1003 00:03:46.862315    3698 utils.go:35] DiscoverSriovDevices
+I1003 00:03:46.904031    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:18:00.0
+I1003 00:03:46.904088    3698 utils.go:257] tryGetInterfaceName(): name is eno1
+I1003 00:03:46.904142    3698 utils.go:257] tryGetInterfaceName(): name is eno1
+I1003 00:03:46.904245    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:18:00.1
+I1003 00:03:46.904291    3698 utils.go:257] tryGetInterfaceName(): name is eno2
+I1003 00:03:46.904340    3698 utils.go:257] tryGetInterfaceName(): name is eno2
+I1003 00:03:46.904424    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.0
+I1003 00:03:46.904460    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0
+I1003 00:03:46.904500    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0
+I1003 00:03:46.905218    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.1
+I1003 00:03:46.905247    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v0
+I1003 00:03:46.905280    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.2
+I1003 00:03:46.905306    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v1
+I1003 00:03:46.905333    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.3
+I1003 00:03:46.905360    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v10
+I1003 00:03:46.905391    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.4
+I1003 00:03:46.905416    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v11
+I1003 00:03:46.905446    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.5
+I1003 00:03:46.905475    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v12
+I1003 00:03:46.905507    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.6
+I1003 00:03:46.905533    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v13
+I1003 00:03:46.905562    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.7
+I1003 00:03:46.905589    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v14
+I1003 00:03:46.905616    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:02.0
+I1003 00:03:46.905639    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v15
+I1003 00:03:46.905670    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.3
+I1003 00:03:46.905696    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v2
+I1003 00:03:46.905728    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.4
+I1003 00:03:46.905751    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v3
+I1003 00:03:46.905780    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.5
+I1003 00:03:46.905805    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v4
+I1003 00:03:46.905834    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.6
+I1003 00:03:46.905858    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v5
+I1003 00:03:46.905884    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.7
+I1003 00:03:46.905909    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v6
+I1003 00:03:46.905941    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.0
+I1003 00:03:46.905966    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v7
+I1003 00:03:46.906004    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.1
+I1003 00:03:46.906032    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v8
+I1003 00:03:46.906059    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.2
+I1003 00:03:46.906083    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v9
+I1003 00:03:46.913428    3698 writer.go:107] setNodeStateStatus(): syncStatus: InProgress, lastSyncError: 
+I1003 00:03:47.993832    3698 daemon.go:341] restartDevicePluginPod(): waiting for pod get deleted
+I1003 00:03:50.994432    3698 daemon.go:341] restartDevicePluginPod(): waiting for pod get deleted
+I1003 00:03:53.994246    3698 daemon.go:341] restartDevicePluginPod(): waiting for pod get deleted
+I1003 00:03:56.994208    3698 daemon.go:341] restartDevicePluginPod(): waiting for pod get deleted
+I1003 00:03:59.994265    3698 daemon.go:341] restartDevicePluginPod(): waiting for pod get deleted
+I1003 00:04:02.994006    3698 daemon.go:341] restartDevicePluginPod(): waiting for pod get deleted
+I1003 00:04:05.994143    3698 daemon.go:341] restartDevicePluginPod(): waiting for pod get deleted
+I1003 00:04:08.994019    3698 daemon.go:205] uncordon(): uncordon node
+I1003 00:04:08.994086    3698 writer.go:47] Run(): refresh trigger
+I1003 00:04:08.994097    3698 writer.go:67] pollNicStatus()
+I1003 00:04:08.994132    3698 utils.go:35] DiscoverSriovDevices
+I1003 00:04:09.001057    3698 daemon.go:233] uncordon(): uncordon complete
+I1003 00:04:09.001095    3698 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1003 00:04:09.001114    3698 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1003 00:04:09.001117    3698 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1003 00:04:09.001137    3698 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1003 00:04:09.030302    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:18:00.0
+I1003 00:04:09.030391    3698 utils.go:257] tryGetInterfaceName(): name is eno1
+I1003 00:04:09.030479    3698 utils.go:257] tryGetInterfaceName(): name is eno1
+I1003 00:04:09.030637    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:18:00.1
+I1003 00:04:09.030698    3698 utils.go:257] tryGetInterfaceName(): name is eno2
+I1003 00:04:09.030771    3698 utils.go:257] tryGetInterfaceName(): name is eno2
+I1003 00:04:09.030912    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.0
+I1003 00:04:09.030965    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0
+I1003 00:04:09.031054    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0
+I1003 00:04:09.032481    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.1
+I1003 00:04:09.032542    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v0
+I1003 00:04:09.032616    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.2
+I1003 00:04:09.032651    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v1
+I1003 00:04:09.032686    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.3
+I1003 00:04:09.032721    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v10
+I1003 00:04:09.032755    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.4
+I1003 00:04:09.032783    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v11
+I1003 00:04:09.032815    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.5
+I1003 00:04:09.032846    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v12
+I1003 00:04:09.032879    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.6
+I1003 00:04:09.032908    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v13
+I1003 00:04:09.032941    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.7
+I1003 00:04:09.032971    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v14
+I1003 00:04:09.033004    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:02.0
+I1003 00:04:09.033040    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v15
+I1003 00:04:09.033083    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.3
+I1003 00:04:09.033118    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v2
+I1003 00:04:09.033159    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.4
+I1003 00:04:09.033188    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v3
+I1003 00:04:09.033214    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.5
+I1003 00:04:09.033239    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v4
+I1003 00:04:09.033268    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.6
+I1003 00:04:09.033291    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v5
+I1003 00:04:09.033319    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.7
+I1003 00:04:09.033343    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v6
+I1003 00:04:09.033372    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.0
+I1003 00:04:09.033402    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v7
+I1003 00:04:09.033428    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.1
+I1003 00:04:09.033463    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v8
+I1003 00:04:09.033488    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.2
+I1003 00:04:09.033511    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v9
+I1003 00:04:09.041263    3698 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1003 00:04:09.041401    3698 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1003 00:04:11.386675    3698 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1003 00:04:39.041461    3698 writer.go:57] Run(): period refresh
+I1003 00:04:39.041481    3698 writer.go:67] pollNicStatus()
+I1003 00:04:39.041485    3698 utils.go:35] DiscoverSriovDevices
+I1003 00:04:39.075351    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:18:00.0
+I1003 00:04:39.075400    3698 utils.go:257] tryGetInterfaceName(): name is eno1
+I1003 00:04:39.075438    3698 utils.go:257] tryGetInterfaceName(): name is eno1
+I1003 00:04:39.075501    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:18:00.1
+I1003 00:04:39.075542    3698 utils.go:257] tryGetInterfaceName(): name is eno2
+I1003 00:04:39.075584    3698 utils.go:257] tryGetInterfaceName(): name is eno2
+I1003 00:04:39.075654    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.0
+I1003 00:04:39.075679    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0
+I1003 00:04:39.075714    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0
+I1003 00:04:39.076391    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.1
+I1003 00:04:39.076419    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v0
+I1003 00:04:39.076472    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.2
+I1003 00:04:39.076498    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v1
+I1003 00:04:39.076525    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.3
+I1003 00:04:39.076548    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v10
+I1003 00:04:39.076581    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.4
+I1003 00:04:39.076607    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v11
+I1003 00:04:39.076634    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.5
+I1003 00:04:39.076661    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v12
+I1003 00:04:39.076688    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.6
+I1003 00:04:39.076716    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v13
+I1003 00:04:39.076742    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.7
+I1003 00:04:39.076765    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v14
+I1003 00:04:39.076790    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:02.0
+I1003 00:04:39.076820    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v15
+I1003 00:04:39.076852    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.3
+I1003 00:04:39.076874    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v2
+I1003 00:04:39.076902    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.4
+I1003 00:04:39.076926    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v3
+I1003 00:04:39.076953    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.5
+I1003 00:04:39.076976    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v4
+I1003 00:04:39.077002    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.6
+I1003 00:04:39.077028    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v5
+I1003 00:04:39.077057    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.7
+I1003 00:04:39.077081    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v6
+I1003 00:04:39.077118    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.0
+I1003 00:04:39.077148    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v7
+I1003 00:04:39.077176    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.1
+I1003 00:04:39.077199    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v8
+I1003 00:04:39.077229    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.2
+I1003 00:04:39.077256    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v9
+I1003 00:04:39.083981    3698 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1003 00:04:41.387014    3698 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1003 00:05:09.084273    3698 writer.go:57] Run(): period refresh
+I1003 00:05:09.084350    3698 writer.go:67] pollNicStatus()
+I1003 00:05:09.084363    3698 utils.go:35] DiscoverSriovDevices
+I1003 00:05:09.122885    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:18:00.0
+I1003 00:05:09.122939    3698 utils.go:257] tryGetInterfaceName(): name is eno1
+I1003 00:05:09.123001    3698 utils.go:257] tryGetInterfaceName(): name is eno1
+I1003 00:05:09.123092    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:18:00.1
+I1003 00:05:09.123134    3698 utils.go:257] tryGetInterfaceName(): name is eno2
+I1003 00:05:09.123183    3698 utils.go:257] tryGetInterfaceName(): name is eno2
+I1003 00:05:09.123270    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.0
+I1003 00:05:09.123311    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0
+I1003 00:05:09.123378    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0
+I1003 00:05:09.124188    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.1
+I1003 00:05:09.124215    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v0
+I1003 00:05:09.124256    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.2
+I1003 00:05:09.124284    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v1
+I1003 00:05:09.124315    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.3
+I1003 00:05:09.124340    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v10
+I1003 00:05:09.124383    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.4
+I1003 00:05:09.124409    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v11
+I1003 00:05:09.124440    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.5
+I1003 00:05:09.124463    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v12
+I1003 00:05:09.124493    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.6
+I1003 00:05:09.124522    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v13
+I1003 00:05:09.124551    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.7
+I1003 00:05:09.124577    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v14
+I1003 00:05:09.124608    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:02.0
+I1003 00:05:09.124633    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v15
+I1003 00:05:09.124662    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.3
+I1003 00:05:09.124686    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v2
+I1003 00:05:09.124716    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.4
+I1003 00:05:09.124741    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v3
+I1003 00:05:09.124772    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.5
+I1003 00:05:09.124802    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v4
+I1003 00:05:09.124831    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.6
+I1003 00:05:09.124857    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v5
+I1003 00:05:09.124886    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.7
+I1003 00:05:09.124909    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v6
+I1003 00:05:09.124937    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.0
+I1003 00:05:09.124963    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v7
+I1003 00:05:09.124993    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.1
+I1003 00:05:09.125019    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v8
+I1003 00:05:09.125048    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.2
+I1003 00:05:09.125073    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v9
+I1003 00:05:09.132766    3698 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1003 00:05:11.387268    3698 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1003 00:05:39.133092    3698 writer.go:57] Run(): period refresh
+I1003 00:05:39.133185    3698 writer.go:67] pollNicStatus()
+I1003 00:05:39.133190    3698 utils.go:35] DiscoverSriovDevices
+I1003 00:05:39.168339    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:18:00.0
+I1003 00:05:39.168382    3698 utils.go:257] tryGetInterfaceName(): name is eno1
+I1003 00:05:39.168428    3698 utils.go:257] tryGetInterfaceName(): name is eno1
+I1003 00:05:39.168487    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:18:00.1
+I1003 00:05:39.168512    3698 utils.go:257] tryGetInterfaceName(): name is eno2
+I1003 00:05:39.168550    3698 utils.go:257] tryGetInterfaceName(): name is eno2
+I1003 00:05:39.168615    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.0
+I1003 00:05:39.168639    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0
+I1003 00:05:39.168673    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0
+I1003 00:05:39.169336    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.1
+I1003 00:05:39.169360    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v0
+I1003 00:05:39.169393    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.2
+I1003 00:05:39.169418    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v1
+I1003 00:05:39.169444    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.3
+I1003 00:05:39.169467    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v10
+I1003 00:05:39.169498    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.4
+I1003 00:05:39.169524    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v11
+I1003 00:05:39.169550    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.5
+I1003 00:05:39.169576    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v12
+I1003 00:05:39.169602    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.6
+I1003 00:05:39.169627    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v13
+I1003 00:05:39.169652    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.7
+I1003 00:05:39.169675    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v14
+I1003 00:05:39.169700    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:02.0
+I1003 00:05:39.169725    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v15
+I1003 00:05:39.169756    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.3
+I1003 00:05:39.169779    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v2
+I1003 00:05:39.169804    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.4
+I1003 00:05:39.169828    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v3
+I1003 00:05:39.169855    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.5
+I1003 00:05:39.169877    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v4
+I1003 00:05:39.169902    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.6
+I1003 00:05:39.169927    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v5
+I1003 00:05:39.169953    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:00.7
+I1003 00:05:39.169975    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v6
+I1003 00:05:39.170005    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.0
+I1003 00:05:39.170032    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v7
+I1003 00:05:39.170058    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.1
+I1003 00:05:39.170081    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v8
+I1003 00:05:39.170110    3698 utils.go:262] getNetdevMTU(): get MTU for device 0000:af:01.2
+I1003 00:05:39.170136    3698 utils.go:257] tryGetInterfaceName(): name is enp175s0v9
+I1003 00:05:39.177320    3698 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1003 00:05:41.387497    3698 daemon.go:241] nodeStateChangeHandler(): Interface not changed

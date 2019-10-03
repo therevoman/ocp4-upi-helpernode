@@ -1,0 +1,497 @@
+I1002 23:26:49.292029  101540 start.go:44] Version: 0.0.1
+I1002 23:26:49.293446  101540 start.go:91] starting node writer
+I1002 23:26:49.293466  101540 start.go:95] Starting SriovNetworkConfigDaemon
+I1002 23:26:49.293474  101540 daemon.go:87] Run(): start daemon
+I1002 23:26:49.293478  101540 daemon.go:465] tryEnableRdma()
+I1002 23:26:49.293791  101540 writer.go:34] Run(): start writer
+I1002 23:26:49.293814  101540 writer.go:67] pollNicStatus()
+I1002 23:26:49.293818  101540 utils.go:35] DiscoverSriovDevices
+E1002 23:26:49.306707  101540 daemon.go:472] tryEnableRdma(): fail to enable rdma exit status 1: 
+I1002 23:26:49.326714  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:26:49.337639  101540 writer.go:107] setNodeStateStatus(): syncStatus: , lastSyncError: 
+I1002 23:26:54.309741  101540 daemon.go:130] nodeStateAddHandler(): New SriovNetworkNodeState Added to Store: worker0.ocp4.kla-tencor.com
+I1002 23:26:54.309769  101540 daemon.go:456] registerPlugins(): []
+I1002 23:26:54.309775  101540 daemon.go:358] loadVendorPlugins(): try to load plugin generic_plugin
+I1002 23:26:54.309785  101540 plugin.go:36] loadPlugin(): load plugin from /plugins/generic_plugin.so
+I1002 23:26:54.309838  101540 writer.go:47] Run(): refresh trigger
+I1002 23:26:54.309844  101540 writer.go:67] pollNicStatus()
+I1002 23:26:54.309847  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:26:54.328274  101540 generic_plugin.go:55] generic-plugin OnNodeStateAdd()
+I1002 23:26:54.328332  101540 daemon.go:155] nodeStateAddHandler(): reqDrain false, reqReboot false
+I1002 23:26:54.340852  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:26:54.346806  101540 writer.go:107] setNodeStateStatus(): syncStatus: InProgress, lastSyncError: 
+I1002 23:26:54.346820  101540 writer.go:47] Run(): refresh trigger
+I1002 23:26:54.346823  101540 writer.go:67] pollNicStatus()
+I1002 23:26:54.346826  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:26:54.347503  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:26:54.372057  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:26:54.378332  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:26:54.378390  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:27:24.309941  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:27:24.378513  101540 writer.go:57] Run(): period refresh
+I1002 23:27:24.378525  101540 writer.go:67] pollNicStatus()
+I1002 23:27:24.378528  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:27:24.406190  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:27:24.411664  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:27:54.310195  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:27:54.411980  101540 writer.go:57] Run(): period refresh
+I1002 23:27:54.412001  101540 writer.go:67] pollNicStatus()
+I1002 23:27:54.412005  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:27:54.438899  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:27:54.444582  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:28:24.310416  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:28:24.444682  101540 writer.go:57] Run(): period refresh
+I1002 23:28:24.444695  101540 writer.go:67] pollNicStatus()
+I1002 23:28:24.444699  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:28:24.473704  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:28:24.479151  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:28:54.310602  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:28:54.479254  101540 writer.go:57] Run(): period refresh
+I1002 23:28:54.479270  101540 writer.go:67] pollNicStatus()
+I1002 23:28:54.479274  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:28:54.509349  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:28:54.514262  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:29:24.310877  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:29:24.514444  101540 writer.go:57] Run(): period refresh
+I1002 23:29:24.514460  101540 writer.go:67] pollNicStatus()
+I1002 23:29:24.514464  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:29:24.542971  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:29:24.548575  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:29:54.311146  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:29:54.548760  101540 writer.go:57] Run(): period refresh
+I1002 23:29:54.548791  101540 writer.go:67] pollNicStatus()
+I1002 23:29:54.548795  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:29:54.579062  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:29:54.584319  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:30:24.311291  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:30:24.584500  101540 writer.go:57] Run(): period refresh
+I1002 23:30:24.584520  101540 writer.go:67] pollNicStatus()
+I1002 23:30:24.584524  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:30:24.610653  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:30:24.615949  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:30:54.311470  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:30:54.616138  101540 writer.go:57] Run(): period refresh
+I1002 23:30:54.616153  101540 writer.go:67] pollNicStatus()
+I1002 23:30:54.616156  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:30:54.645147  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:30:54.650665  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:31:24.311609  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:31:24.650785  101540 writer.go:57] Run(): period refresh
+I1002 23:31:24.650809  101540 writer.go:67] pollNicStatus()
+I1002 23:31:24.650813  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:31:24.676343  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:31:24.681200  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:31:54.311702  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:31:54.681305  101540 writer.go:57] Run(): period refresh
+I1002 23:31:54.681335  101540 writer.go:67] pollNicStatus()
+I1002 23:31:54.681339  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:31:54.709073  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:31:54.714501  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:32:24.311900  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:32:24.715379  101540 writer.go:57] Run(): period refresh
+I1002 23:32:24.715399  101540 writer.go:67] pollNicStatus()
+I1002 23:32:24.715403  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:32:24.742742  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:32:24.748093  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:32:54.312197  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:32:54.748230  101540 writer.go:57] Run(): period refresh
+I1002 23:32:54.748254  101540 writer.go:67] pollNicStatus()
+I1002 23:32:54.748258  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:32:54.781193  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:32:54.786210  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:33:24.312486  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:33:24.786363  101540 writer.go:57] Run(): period refresh
+I1002 23:33:24.786383  101540 writer.go:67] pollNicStatus()
+I1002 23:33:24.786388  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:33:24.813830  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:33:24.819739  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:33:54.312742  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:33:54.819886  101540 writer.go:57] Run(): period refresh
+I1002 23:33:54.819902  101540 writer.go:67] pollNicStatus()
+I1002 23:33:54.819906  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:33:54.847130  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:33:54.852629  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:34:24.313023  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:34:24.852765  101540 writer.go:57] Run(): period refresh
+I1002 23:34:24.852789  101540 writer.go:67] pollNicStatus()
+I1002 23:34:24.852793  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:34:24.878647  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:34:24.884065  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:34:54.313181  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:34:54.884197  101540 writer.go:57] Run(): period refresh
+I1002 23:34:54.884214  101540 writer.go:67] pollNicStatus()
+I1002 23:34:54.884218  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:34:54.913735  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:34:54.919457  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:35:24.313343  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:35:24.919596  101540 writer.go:57] Run(): period refresh
+I1002 23:35:24.919619  101540 writer.go:67] pollNicStatus()
+I1002 23:35:24.919623  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:35:24.945379  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:35:24.950629  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:35:54.313413  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:35:54.950937  101540 writer.go:57] Run(): period refresh
+I1002 23:35:54.950966  101540 writer.go:67] pollNicStatus()
+I1002 23:35:54.950971  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:35:54.980355  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:35:54.986063  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:36:24.313678  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:36:24.986352  101540 writer.go:57] Run(): period refresh
+I1002 23:36:24.986370  101540 writer.go:67] pollNicStatus()
+I1002 23:36:24.986373  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:36:25.009792  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:36:25.015631  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:36:54.313803  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:36:55.015756  101540 writer.go:57] Run(): period refresh
+I1002 23:36:55.015774  101540 writer.go:67] pollNicStatus()
+I1002 23:36:55.015778  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:36:55.049566  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:36:55.055064  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:37:24.314013  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:37:25.055263  101540 writer.go:57] Run(): period refresh
+I1002 23:37:25.055280  101540 writer.go:67] pollNicStatus()
+I1002 23:37:25.055284  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:37:25.089801  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:37:25.095419  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:37:54.314161  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:37:55.095545  101540 writer.go:57] Run(): period refresh
+I1002 23:37:55.095570  101540 writer.go:67] pollNicStatus()
+I1002 23:37:55.095574  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:37:55.124507  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:37:55.130064  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:38:24.314347  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:38:25.130191  101540 writer.go:57] Run(): period refresh
+I1002 23:38:25.130209  101540 writer.go:67] pollNicStatus()
+I1002 23:38:25.130212  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:38:25.158079  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:38:25.163005  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:38:54.314517  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:38:55.163227  101540 writer.go:57] Run(): period refresh
+I1002 23:38:55.163246  101540 writer.go:67] pollNicStatus()
+I1002 23:38:55.163250  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:38:55.190840  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:38:55.196679  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:39:24.314634  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:39:25.196926  101540 writer.go:57] Run(): period refresh
+I1002 23:39:25.196980  101540 writer.go:67] pollNicStatus()
+I1002 23:39:25.196994  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:39:25.226038  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:39:25.231679  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:39:54.314744  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:39:55.231960  101540 writer.go:57] Run(): period refresh
+I1002 23:39:55.231981  101540 writer.go:67] pollNicStatus()
+I1002 23:39:55.231984  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:39:55.255146  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:39:55.260916  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:40:24.314947  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:40:25.261019  101540 writer.go:57] Run(): period refresh
+I1002 23:40:25.261036  101540 writer.go:67] pollNicStatus()
+I1002 23:40:25.261039  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:40:25.288736  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:40:25.294261  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:40:54.315156  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:40:55.294371  101540 writer.go:57] Run(): period refresh
+I1002 23:40:55.294388  101540 writer.go:67] pollNicStatus()
+I1002 23:40:55.294391  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:40:55.319037  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:40:55.324082  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:41:24.315567  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:41:25.324219  101540 writer.go:57] Run(): period refresh
+I1002 23:41:25.324237  101540 writer.go:67] pollNicStatus()
+I1002 23:41:25.324241  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:41:25.349227  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:41:25.354779  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:41:54.315739  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:41:55.355013  101540 writer.go:57] Run(): period refresh
+I1002 23:41:55.355029  101540 writer.go:67] pollNicStatus()
+I1002 23:41:55.355033  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:41:55.382417  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:41:55.387958  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:42:24.316086  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:42:25.388190  101540 writer.go:57] Run(): period refresh
+I1002 23:42:25.388207  101540 writer.go:67] pollNicStatus()
+I1002 23:42:25.388211  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:42:25.415602  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:42:25.420863  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:42:54.316229  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:42:55.420997  101540 writer.go:57] Run(): period refresh
+I1002 23:42:55.421014  101540 writer.go:67] pollNicStatus()
+I1002 23:42:55.421017  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:42:55.451872  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:42:55.457129  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:43:24.316632  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:43:25.457293  101540 writer.go:57] Run(): period refresh
+I1002 23:43:25.457321  101540 writer.go:67] pollNicStatus()
+I1002 23:43:25.457325  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:43:25.487983  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:43:25.493509  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:43:54.316929  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:43:55.493830  101540 writer.go:57] Run(): period refresh
+I1002 23:43:55.493881  101540 writer.go:67] pollNicStatus()
+I1002 23:43:55.493885  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:43:55.518778  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:43:55.524303  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:44:24.317285  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:44:25.524578  101540 writer.go:57] Run(): period refresh
+I1002 23:44:25.524597  101540 writer.go:67] pollNicStatus()
+I1002 23:44:25.524600  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:44:25.557719  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:44:25.563257  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:44:54.317482  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:44:55.563547  101540 writer.go:57] Run(): period refresh
+I1002 23:44:55.563567  101540 writer.go:67] pollNicStatus()
+I1002 23:44:55.563570  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:44:55.595332  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:44:55.600606  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:45:24.317673  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:45:25.600878  101540 writer.go:57] Run(): period refresh
+I1002 23:45:25.600917  101540 writer.go:67] pollNicStatus()
+I1002 23:45:25.600930  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:45:25.630594  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:45:25.636537  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:45:54.317924  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:45:55.636742  101540 writer.go:57] Run(): period refresh
+I1002 23:45:55.636759  101540 writer.go:67] pollNicStatus()
+I1002 23:45:55.636763  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:45:55.666187  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:45:55.671601  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:46:24.318120  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:46:25.671822  101540 writer.go:57] Run(): period refresh
+I1002 23:46:25.671880  101540 writer.go:67] pollNicStatus()
+I1002 23:46:25.671893  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:46:25.696864  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:46:25.702796  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:46:54.318716  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:46:55.703026  101540 writer.go:57] Run(): period refresh
+I1002 23:46:55.703053  101540 writer.go:67] pollNicStatus()
+I1002 23:46:55.703065  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:46:55.728572  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:46:55.733912  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:47:24.318892  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:47:25.734035  101540 writer.go:57] Run(): period refresh
+I1002 23:47:25.734049  101540 writer.go:67] pollNicStatus()
+I1002 23:47:25.734053  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:47:25.770963  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:47:25.776772  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:47:54.319041  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:47:55.777044  101540 writer.go:57] Run(): period refresh
+I1002 23:47:55.777083  101540 writer.go:67] pollNicStatus()
+I1002 23:47:55.777096  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:47:55.809654  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:47:55.814630  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:48:24.321376  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:48:25.814906  101540 writer.go:57] Run(): period refresh
+I1002 23:48:25.814930  101540 writer.go:67] pollNicStatus()
+I1002 23:48:25.814934  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:48:25.845515  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:48:25.850722  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:48:54.320250  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:48:55.850896  101540 writer.go:57] Run(): period refresh
+I1002 23:48:55.850918  101540 writer.go:67] pollNicStatus()
+I1002 23:48:55.850922  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:48:55.884861  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:48:55.890625  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:49:24.320600  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:49:25.890846  101540 writer.go:57] Run(): period refresh
+I1002 23:49:25.890881  101540 writer.go:67] pollNicStatus()
+I1002 23:49:25.890885  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:49:25.921723  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:49:25.927582  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:49:54.320933  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:49:55.928469  101540 writer.go:57] Run(): period refresh
+I1002 23:49:55.928487  101540 writer.go:67] pollNicStatus()
+I1002 23:49:55.928493  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:49:55.953817  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:49:55.959642  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:50:24.321139  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:50:25.959840  101540 writer.go:57] Run(): period refresh
+I1002 23:50:25.959889  101540 writer.go:67] pollNicStatus()
+I1002 23:50:25.959893  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:50:25.985034  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:50:25.991272  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:50:54.321660  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:50:55.991436  101540 writer.go:57] Run(): period refresh
+I1002 23:50:55.991481  101540 writer.go:67] pollNicStatus()
+I1002 23:50:55.991494  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:50:56.024658  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:50:56.030107  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:51:24.321776  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:51:26.030251  101540 writer.go:57] Run(): period refresh
+I1002 23:51:26.030279  101540 writer.go:67] pollNicStatus()
+I1002 23:51:26.030283  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:51:26.065604  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:51:26.070947  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:51:54.321962  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:51:56.071626  101540 writer.go:57] Run(): period refresh
+I1002 23:51:56.071643  101540 writer.go:67] pollNicStatus()
+I1002 23:51:56.071647  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:51:56.117881  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:51:56.123534  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:52:24.322229  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:52:26.123736  101540 writer.go:57] Run(): period refresh
+I1002 23:52:26.123752  101540 writer.go:67] pollNicStatus()
+I1002 23:52:26.123756  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:52:26.156432  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:52:26.162349  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:52:54.322472  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:52:56.162582  101540 writer.go:57] Run(): period refresh
+I1002 23:52:56.162602  101540 writer.go:67] pollNicStatus()
+I1002 23:52:56.162606  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:52:56.190896  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:52:56.196641  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:53:24.322638  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:53:26.196964  101540 writer.go:57] Run(): period refresh
+I1002 23:53:26.197032  101540 writer.go:67] pollNicStatus()
+I1002 23:53:26.197062  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:53:26.222955  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:53:26.228744  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:53:54.322896  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:53:56.228935  101540 writer.go:57] Run(): period refresh
+I1002 23:53:56.228963  101540 writer.go:67] pollNicStatus()
+I1002 23:53:56.228967  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:53:56.258861  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:53:56.264596  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:54:24.323515  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:54:26.264812  101540 writer.go:57] Run(): period refresh
+I1002 23:54:26.264834  101540 writer.go:67] pollNicStatus()
+I1002 23:54:26.264838  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:54:26.299843  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:54:26.305332  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:54:54.324302  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:54:56.305621  101540 writer.go:57] Run(): period refresh
+I1002 23:54:56.305639  101540 writer.go:67] pollNicStatus()
+I1002 23:54:56.305643  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:54:56.334527  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:54:56.340697  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:55:24.324535  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:55:26.340968  101540 writer.go:57] Run(): period refresh
+I1002 23:55:26.341015  101540 writer.go:67] pollNicStatus()
+I1002 23:55:26.341028  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:55:26.365462  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:55:26.371269  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:55:54.324684  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:55:56.371508  101540 writer.go:57] Run(): period refresh
+I1002 23:55:56.371552  101540 writer.go:67] pollNicStatus()
+I1002 23:55:56.371565  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:55:56.395869  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:55:56.401375  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:56:24.324776  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:56:26.401648  101540 writer.go:57] Run(): period refresh
+I1002 23:56:26.401674  101540 writer.go:67] pollNicStatus()
+I1002 23:56:26.401678  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:56:26.434526  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:56:26.439977  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:56:54.325117  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:56:56.440133  101540 writer.go:57] Run(): period refresh
+I1002 23:56:56.440148  101540 writer.go:67] pollNicStatus()
+I1002 23:56:56.440151  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:56:56.465272  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:56:56.471385  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:57:24.325221  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:57:26.471766  101540 writer.go:57] Run(): period refresh
+I1002 23:57:26.471809  101540 writer.go:67] pollNicStatus()
+I1002 23:57:26.471822  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:57:26.501854  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:57:26.507494  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:57:54.325510  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:57:56.507696  101540 writer.go:57] Run(): period refresh
+I1002 23:57:56.507712  101540 writer.go:67] pollNicStatus()
+I1002 23:57:56.507716  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:57:56.539584  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:57:56.545117  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:58:24.326041  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:58:26.545239  101540 writer.go:57] Run(): period refresh
+I1002 23:58:26.545255  101540 writer.go:67] pollNicStatus()
+I1002 23:58:26.545259  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:58:26.569804  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:58:26.576234  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:58:54.326047  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:58:56.576393  101540 writer.go:57] Run(): period refresh
+I1002 23:58:56.576414  101540 writer.go:67] pollNicStatus()
+I1002 23:58:56.576418  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:58:56.607367  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:58:56.613291  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:59:24.326212  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:59:26.613655  101540 writer.go:57] Run(): period refresh
+I1002 23:59:26.613702  101540 writer.go:67] pollNicStatus()
+I1002 23:59:26.613714  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:59:26.639959  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:59:26.645423  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1002 23:59:54.326392  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1002 23:59:56.645549  101540 writer.go:57] Run(): period refresh
+I1002 23:59:56.645566  101540 writer.go:67] pollNicStatus()
+I1002 23:59:56.645570  101540 utils.go:35] DiscoverSriovDevices
+I1002 23:59:56.676135  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1002 23:59:56.680944  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1003 00:00:24.326687  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1003 00:00:26.681094  101540 writer.go:57] Run(): period refresh
+I1003 00:00:26.681118  101540 writer.go:67] pollNicStatus()
+I1003 00:00:26.681122  101540 utils.go:35] DiscoverSriovDevices
+I1003 00:00:26.711932  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1003 00:00:26.718173  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1003 00:00:54.326784  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1003 00:00:56.718355  101540 writer.go:57] Run(): period refresh
+I1003 00:00:56.718377  101540 writer.go:67] pollNicStatus()
+I1003 00:00:56.718381  101540 utils.go:35] DiscoverSriovDevices
+I1003 00:00:56.745477  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1003 00:00:56.750714  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1003 00:01:24.326911  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1003 00:01:26.750950  101540 writer.go:57] Run(): period refresh
+I1003 00:01:26.750996  101540 writer.go:67] pollNicStatus()
+I1003 00:01:26.751000  101540 utils.go:35] DiscoverSriovDevices
+I1003 00:01:26.778683  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1003 00:01:26.784929  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1003 00:01:54.327135  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1003 00:01:56.785132  101540 writer.go:57] Run(): period refresh
+I1003 00:01:56.785159  101540 writer.go:67] pollNicStatus()
+I1003 00:01:56.785163  101540 utils.go:35] DiscoverSriovDevices
+I1003 00:01:56.819654  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1003 00:01:56.825438  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1003 00:02:24.327581  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1003 00:02:26.825642  101540 writer.go:57] Run(): period refresh
+I1003 00:02:26.825663  101540 writer.go:67] pollNicStatus()
+I1003 00:02:26.825667  101540 utils.go:35] DiscoverSriovDevices
+I1003 00:02:26.853931  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1003 00:02:26.859338  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1003 00:02:54.328093  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1003 00:02:56.859473  101540 writer.go:57] Run(): period refresh
+I1003 00:02:56.859489  101540 writer.go:67] pollNicStatus()
+I1003 00:02:56.859492  101540 utils.go:35] DiscoverSriovDevices
+I1003 00:02:56.889345  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1003 00:02:56.894653  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1003 00:03:24.328193  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1003 00:03:26.894946  101540 writer.go:57] Run(): period refresh
+I1003 00:03:26.894987  101540 writer.go:67] pollNicStatus()
+I1003 00:03:26.894991  101540 utils.go:35] DiscoverSriovDevices
+I1003 00:03:26.928644  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1003 00:03:26.934491  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1003 00:03:54.328528  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1003 00:03:56.934768  101540 writer.go:57] Run(): period refresh
+I1003 00:03:56.934788  101540 writer.go:67] pollNicStatus()
+I1003 00:03:56.934792  101540 utils.go:35] DiscoverSriovDevices
+I1003 00:03:56.961860  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1003 00:03:56.967436  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1003 00:04:24.328783  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1003 00:04:26.967627  101540 writer.go:57] Run(): period refresh
+I1003 00:04:26.967645  101540 writer.go:67] pollNicStatus()
+I1003 00:04:26.967649  101540 utils.go:35] DiscoverSriovDevices
+I1003 00:04:26.991903  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1003 00:04:26.997401  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1003 00:04:54.329043  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1003 00:04:56.997579  101540 writer.go:57] Run(): period refresh
+I1003 00:04:56.997641  101540 writer.go:67] pollNicStatus()
+I1003 00:04:56.997645  101540 utils.go:35] DiscoverSriovDevices
+I1003 00:04:57.026245  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1003 00:04:57.031710  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1003 00:05:24.329185  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1003 00:05:27.031911  101540 writer.go:57] Run(): period refresh
+I1003 00:05:27.031928  101540 writer.go:67] pollNicStatus()
+I1003 00:05:27.031931  101540 utils.go:35] DiscoverSriovDevices
+I1003 00:05:27.055776  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1003 00:05:27.061524  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
+I1003 00:05:54.329531  101540 daemon.go:241] nodeStateChangeHandler(): Interface not changed
+I1003 00:05:57.061784  101540 writer.go:57] Run(): period refresh
+I1003 00:05:57.061818  101540 writer.go:67] pollNicStatus()
+I1003 00:05:57.061822  101540 utils.go:35] DiscoverSriovDevices
+I1003 00:05:57.098503  101540 utils.go:262] getNetdevMTU(): get MTU for device 0000:00:03.0
+I1003 00:05:57.104820  101540 writer.go:107] setNodeStateStatus(): syncStatus: Succeeded, lastSyncError: 
