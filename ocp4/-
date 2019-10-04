@@ -1,0 +1,11 @@
+--2019-09-25 06:18:07--  http://example.com/
+Resolving example.com (example.com)... 93.184.216.34, 2606:2800:220:1:248:1893:25c8:1946
+Connecting to example.com (example.com)|93.184.216.34|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1270 (1.2K) [text/html]
+Saving to: ‘index.html’
+
+     0K .                                                     100%  158M=0s
+
+2019-09-25 06:18:08 (158 MB/s) - ‘index.html’ saved [1270/1270]
+

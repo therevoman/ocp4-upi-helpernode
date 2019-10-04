@@ -1,0 +1,3 @@
+time="2019-09-24T02:42:32Z" level=debug msg="OpenShift Installer v4.2.0"
+time="2019-09-24T02:42:32Z" level=debug msg="Built from commit f96afb99f1ce4f8976ce62f7df44acb24d2062d6"
+time="2019-09-24T02:42:32Z" level=fatal msg="Failed while preparing to destroy cluster: open metadata.json: no such file or directory"

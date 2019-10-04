@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Template
+metadata:
+  name: pv-nfs-1g-template
+  annotations:
+    description: "Description"
+    tags: "pv,nfs"
+objects:
+  - apiVersion: v1
+    kind: PersistentVolume
+    metadata:
+      name: pv-nfs-1g-${PV_NUMBER}
+    spec:
+      capacity:
+        storage: 1Gi
+      accessModes:
+      - ReadWriteMany
+      mountOptions:
+        - nfsvers=4.2
+      nfs:
+        path: /tank/ocp/1g-pv${PV_NUMBER}
+        server: solitude.revoweb.home
+      persistentVolumeReclaimPolicy: Retain
+parameters:
+- description: pv number
+  from: '[A-Z0-9]{8}'
+  name: PV_NUMBER
