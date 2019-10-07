@@ -1,0 +1,14 @@
+apiVersion: k8s.cni.cncf.io/v1
+kind: NetworkAttachmentDefinition
+metadata:
+  annotations:
+    k8s.v1.cni.cncf.io/resourceName: openshift.io/sriov
+  creationTimestamp: "2019-10-03T00:39:59Z"
+  generation: 2
+  name: sriov-net2
+  namespace: sriov-network-operator
+  resourceVersion: "4822314"
+  selfLink: /apis/k8s.cni.cncf.io/v1/namespaces/sriov-network-operator/network-attachment-definitions/sriov-net2
+  uid: 541becd2-e576-11e9-85cb-0cc47a6a5d1c
+spec:
+  config: '{ "type": "sriov", "name": "sriov-net2", "ipam": { "type": "dhcp" } }'

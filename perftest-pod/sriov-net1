@@ -1,0 +1,14 @@
+apiVersion: k8s.cni.cncf.io/v1
+kind: NetworkAttachmentDefinition
+metadata:
+  annotations:
+    k8s.v1.cni.cncf.io/resourceName: openshift.io/sriov
+  creationTimestamp: "2019-10-03T01:36:02Z"
+  generation: 1
+  name: sriov-net1
+  namespace: sriov-network-operator
+  resourceVersion: "4831807"
+  selfLink: /apis/k8s.cni.cncf.io/v1/namespaces/sriov-network-operator/network-attachment-definitions/sriov-net1
+  uid: 28e45e96-e57e-11e9-85cb-0cc47a6a5d1c
+spec:
+  config: '{ "type": "sriov", "name": "sriov-net1" }'

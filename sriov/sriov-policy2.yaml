@@ -9,7 +9,7 @@ spec:
     feature.node.kubernetes.io/sriov-capable: "true"
   priority: 9
   mtu: 4200
-  numVfs: 16
+  numVfs: 4
   nicSelector:
     vendor: "15b3"
     deviceID: "1018" 
