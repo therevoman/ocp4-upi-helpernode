@@ -1,0 +1,13 @@
+apiVersion: sriovnetwork.openshift.io/v1
+kind: SriovNetwork
+metadata:
+  name: sriov-test
+  namespace: sriov-network-operator
+spec:
+  networkNamespace: sriov-network-operator
+  ipam: |
+    {
+      "type": "dhcp"
+    }
+  resourceName: sriov
+

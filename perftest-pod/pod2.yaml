@@ -1,0 +1,104 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.v1.cni.cncf.io/networks: sriov-net2
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "openshift-sdn",
+          "interface": "eth0",
+          "ips": [
+              "10.254.3.143"
+          ],
+          "default": true,
+          "dns": {}
+      },{
+          "name": "sriov-net2",
+          "dns": {}
+      }]
+  creationTimestamp: "2019-10-04T21:44:32Z"
+  name: pod2
+  namespace: sriov-network-operator
+  resourceVersion: "5563397"
+  selfLink: /api/v1/namespaces/sriov-network-operator/pods/pod2
+  uid: 26800f8c-e6f0-11e9-85cb-0cc47a6a5d1c
+spec:
+  containers:
+  - command:
+    - /bin/bash
+    - -c
+    - sleep 2000000000000
+    image: centos/tools
+    imagePullPolicy: Always
+    name: sriov
+    resources:
+      limits:
+        openshift.io/sriov: "1"
+      requests:
+        openshift.io/sriov: "1"
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: default-token-nscmn
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: default-dockercfg-548lb
+  nodeName: computenode3.ocp4.kla-tencor.com
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: default-token-nscmn
+    secret:
+      defaultMode: 420
+      secretName: default-token-nscmn
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2019-10-04T21:44:32Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2019-10-04T21:44:43Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2019-10-04T21:44:43Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2019-10-04T21:44:32Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://6757287814d527ed699b57e514feed20b7b5ee9e396e077fda0264b7bd5c0e21
+    image: docker.io/centos/tools:latest
+    imageID: docker.io/centos/tools@sha256:81159542603c2349a276a30cc147045bc642bd84a62c1b427a8d243ef1893e2f
+    lastState: {}
+    name: sriov
+    ready: true
+    restartCount: 0
+    state:
+      running:
+        startedAt: "2019-10-04T21:44:43Z"
+  hostIP: 192.168.10.34
+  phase: Running
+  podIP: 10.254.3.143
+  qosClass: BestEffort
+  startTime: "2019-10-04T21:44:32Z"

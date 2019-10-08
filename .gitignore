@@ -1,0 +1,4 @@
+# Ignore large blobs
+*.tgz
+*.rpm
+

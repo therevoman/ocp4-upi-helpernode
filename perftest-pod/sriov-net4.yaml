@@ -1,0 +1,29 @@
+apiVersion: "k8s.cni.cncf.io/v1"
+kind: NetworkAttachmentDefinition
+metadata:
+  name: sriov-net4
+  annotations:
+    k8s.v1.cni.cncf.io/resourceName: openshift.io/sriov
+spec:
+  config: '{
+    "type": "sriov",
+    "name": "sriov-net2",
+    "ipam": {
+      "type": "host-local",
+      "ranges": [
+        [
+          {
+            "subnet": "192.168.10.0/24",
+            "rangeStart": "192.168.10.60",
+            "rangeEnd": "192.168.10.70",
+            "gateway": "192.168.10.1"
+          }
+        ]
+      ],
+      "routes": [
+        {  "dst": "0.0.0.0/0" },
+        { "dst": "192.168.0.0/16", "gw": "192.168.10.1" }
+      ]
+    }
+  }'
+

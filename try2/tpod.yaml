@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: tpod
+  annotations:
+    k8s.v1.cni.cncf.io/networks: sriov-net1
+spec:
+  containers:
+  - name: testpmd
+    image: image-registry.openshift-image-registry.svc:5000/sriov-network-operator/perftest@sha256:64619c57a10ea874b164fb229a12355129800075838ca5899962f3195d1ed8ae
+    imagePullPolicy: Never
+    securityContext:
+     capabilities:
+        add: ["IPC_LOCK"]
+    command: ["sleep", "infinity"]
+    resources:
+      requests:
+        openshift.io/sriov: '1'
+      limits:
+        openshift.io/sriov: '1'
