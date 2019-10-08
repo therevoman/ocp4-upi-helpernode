@@ -1,0 +1,39 @@
+kind: DaemonSet
+apiVersion: apps/v1
+metadata:
+  name: sriov-cni
+  namespace: openshift-sriov
+  annotations:
+    kubernetes.io/description: |
+      This daemon set launches the SR-IOV CNI plugin on SR-IOV capable worker nodes.
+spec:
+  selector:
+    matchLabels:
+      app: sriov-cni
+  updateStrategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: sriov-cni
+        component: network
+        type: infra
+        openshift.io/component: network
+    spec:
+      nodeSelector:
+        beta.kubernetes.io/os: linux
+      tolerations:
+      - operator: Exists
+      serviceAccountName: sriov-cni
+      containers:
+      - name: sriov-cni
+        image: quay.io/openshift/ose-sriov-cni:v4.0.0
+        securityContext:
+          privileged: true
+        volumeMounts:
+        - name: cnibin
+          mountPath: /host/opt/cni/bin
+      volumes:
+        - name: cnibin
+          hostPath:
+            path: /var/lib/cni/bin
