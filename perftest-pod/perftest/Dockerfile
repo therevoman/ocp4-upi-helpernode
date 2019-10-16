@@ -31,25 +31,30 @@ RUN rm /etc/rhsm-host && \
 
 
 RUN yum install perl python36 ethtool lsof pciutils iproute -y && \
-	yum clean all
+        yum clean all
 RUN yum install -y tcsh numactl-libs gcc-gfortran tk tcl && \
-	yum clean all
+        yum clean all
 #RUN yum install -y kernel-devel-* kernel-headers perl gcc make elfutils-libelf-devel
 
 RUN cd /app && \
-	tar -xzvf ${MOFED_VER}.tgz && \
-	cd ${MOFED_VER} && \
-	./mlnxofedinstall --all -vv --skip-repo --force --user-space-only --without-fw-update && \
-	rm -rf /app/${MOFED_VER}
-##	./mlnxofedinstall -vv --skip-repo --force --guest
-##	./mlnxofedinstall --all --add-kernel-support -vv --skip-repo
+        tar -xzvf ${MOFED_VER}.tgz && \
+        cd ${MOFED_VER} && \
+        ./mlnxofedinstall --all -vv --skip-repo --force --user-space-only --without-fw-update && \
+        rm -rf /app/${MOFED_VER}
+##      ./mlnxofedinstall -vv --skip-repo --force --guest
+##      ./mlnxofedinstall --all --add-kernel-support -vv --skip-repo
 #RUN yum install -y mlnx-en-vma
 #RUN yum install -y perftest librdmacm-utils && yum clean all
 
 RUN cd /app && make clean && make
+#RUN ulimit -l unlimited
+RUN setcap cap_ipc_lock=+ep /app/ImageReceiver && \
+	setcap cap_sys_resource=+ep /app/ImageReceiver && \
+	setcap cap_ipc_lock=+ep /app/ErnicImitator
+RUN setcap cap_ipc_lock=+ep /usr/bin/udaddy
 
 #EXPOSE 54321 54322 54323 54324
-USER 1001
+USER 1000
 
 CMD /app/RunImageReceiver.sh
 #CMD sleep infinity
