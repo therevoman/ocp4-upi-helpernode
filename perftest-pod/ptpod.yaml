@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.v1.cni.cncf.io/networks: sriov-net2
+  labels:
+    app: ptpod
+  name: ptpod
+  namespace: sriov-network-operator
+spec:
+  containers:
+  - image: image-registry.openshift-image-registry.svc:5000/sriov-network-operator/perftest@sha256:ce6bdd8a8ef71acceb9b9ab5ff4b1ddfc704070fa773fe3cafebbaf1ab878d40
+    imagePullPolicy: Always
+    serviceAccount: usehostaccess
+    serviceAccountName: usehostaccess
+    securityContext:
+     capabilities:
+       add: ["CAP_SYS_RESOURCE"]
+    name: perftest
+    resources:
+      limits:
+        openshift.io/sriov: "1"
+      requests:
+        openshift.io/sriov: "1"
+  serviceAccount: usehostaccess
+  serviceAccountName: usehostaccess
+  securityContext:
+   capabilities:
+     add: ["CAP_SYS_RESOURCE"]
+  terminationGracePeriodSeconds: 30
