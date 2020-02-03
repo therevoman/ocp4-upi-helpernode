@@ -17,7 +17,7 @@
         - httpd
         - vim
         - bash-completion
-        - libselinux-python
+        - python3-libselinux
         - podman
         - nfs-utils
       state: present
@@ -25,7 +25,7 @@
   - name: Install packages for DHCP/PXE install
     yum:
       name:
-        - dhcp
+        - dhcp-server
         - syslinux
         - tftp-server
       state: present
@@ -151,8 +151,8 @@
       path: /export
       state: directory
       mode: 0777
-      owner: nfsnobody
-      group: nfsnobody
+      owner: nobody
+      group: nobody
     notify:
       - restart nfs
 
@@ -272,8 +272,8 @@
       - httpd
       - rpcbind
       - nfs-server
-      - nfs-lock
-      - nfs-idmap
+        #      - nfs-lock
+      - nfs-idmapd
 
   - name: Starting DHCP/PXE services
     service:
