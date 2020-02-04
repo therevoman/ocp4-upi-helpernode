@@ -1,0 +1,57 @@
+---
+disk: vda
+helper:
+  name: "helper"
+  ipaddr: "192.168.12.1"
+  networkifacename: "br0"
+dns:
+  domain: "mini.lab"
+  clusterid: "ocp4"
+  forwarder1: "8.8.8.8"
+  forwarder2: "8.8.4.4"
+dhcp:
+  router: "192.168.12.1"
+  bcast: "192.168.12.255"
+  netmask: "255.255.255.0"
+  poolstart: "192.168.12.100"
+  poolend: "192.168.12.130"
+  ipid: "192.168.12.0"
+  netmaskid: "255.255.255.0"
+bootstrap:
+  name: "bootstrap"
+  ipaddr: "192.168.12.10"
+  macaddr: "52:54:00:60:72:67"
+masters:
+  - name: "master0"
+    ipaddr: "192.168.12.11"
+    macaddr: "52:54:00:e7:9d:67"
+  - name: "master1"
+    ipaddr: "192.168.12.12"
+    macaddr: "52:54:00:80:16:23"
+  - name: "master2"
+    ipaddr: "192.168.12.13"
+    macaddr: "52:54:00:d5:1c:39"
+workers:
+  - name: "worker0"
+    ipaddr: "192.168.12.21"
+    macaddr: "52:54:00:f4:26:a1"
+  - name: "worker1"
+    ipaddr: "192.168.12.22"
+    macaddr: "52:54:00:82:90:00"
+  - name: "worker2"
+    ipaddr: "192.168.12.23"
+    macaddr: "52:54:00:8e:10:34"
+other:
+  - name: "ovirt"
+    ipaddr: "192.168.12.5"
+    macaddr: "52:54:00:be:1a:c3"
+  - name: "node1"
+    ipaddr: "192.168.12.6"
+    macaddr: "00:e0:4c:98:33:85"
+  - name: "node2"
+    ipaddr: "192.168.12.7"
+    macaddr: "00:e0:4c:98:24:fb"
+  - name: "node3"
+    ipaddr: "192.168.12.8"
+    macaddr: "00:e0:4c:98:1a:5d"
+
