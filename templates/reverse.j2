@@ -8,8 +8,8 @@ $TTL 1W
 	IN	NS	ns1.{{ dns.clusterid }}.{{ dns.domain }}.
 ;
 ; syntax is "last octet" and the host must have fqdn with trailing dot
-1       IN      PTR     helper.ocp4.mini.lab.
-5       IN      PTR     ovirt.ocp4.mini.lab.
+1       IN      PTR     helper.{{ dns.clusterid }}.{{ dns.domain }}.
+5       IN      PTR     ovirt.{{ dns.clusterid }}.{{ dns.domain }}.
 
 {% for m in masters %}
 {{ m.ipaddr.split('.')[3] }}	IN	PTR	{{ m.name }}.{{ dns.clusterid }}.{{ dns.domain }}.
