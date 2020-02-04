@@ -129,12 +129,12 @@ for i in dhcpd named haproxy httpd tftp; do echo -e "Status of $i svc \t\t-> $(s
 }
 ###
 nfs-info () {
-availablesize=$(df -h --output=avail /export | tail -1 | tr -d " ""\t""[:alpha:]")
+availablesize=$(df -h --output=avail /export/ocp | tail -1 | tr -d " ""\t""[:alpha:]")
 warningsize=50
 #
 cat <<EOF
 
-An NFS server has been installed and the entire /export directory has been shared out. To set up the nfs-auto-provisioner; you just need to run the following command after "openshift-install wait-for bootstrap-complete --log-level debug" has finished...
+An NFS server has been installed and the entire /export/ocp directory has been shared out. To set up the nfs-auto-provisioner; you just need to run the following command after "openshift-install wait-for bootstrap-complete --log-level debug" has finished...
 
 	$(basename $0) nfs-setup
 
@@ -158,9 +158,9 @@ cat <<EOW
 
 !!!!!!!!!!!!!!! WARNING !!!!!!!!!!!!!!!
 
-I've detected that you're using as small disk for your /export directory. OpenShift uses a LOT of storage and it's recommended to use a disk of AT LEAST 100GB. You can do one of two things...
+I've detected that you're using as small disk for your /export/ocp directory. OpenShift uses a LOT of storage and it's recommended to use a disk of AT LEAST 100GB. You can do one of two things...
 
-	1) Add a disk to this server and mount it on /export (RECOMMENDED)
+	1) Add a disk to this server and mount it on /export/ocp (RECOMMENDED)
 	2) Grow the / volume (not ideal but okay)
 
 If you proceed to use this server how it is, you void ANY chance of help from me on slack or github :)

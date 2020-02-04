@@ -153,6 +153,14 @@
       mode: 0777
       owner: nobody
       group: nobody
+
+  - name: Create NFS export/ocp directory
+    file:
+      path: /export/registry
+      state: directory
+      mode: 0777
+      owner: nobody
+      group: nobody
     notify:
       - restart nfs
 

@@ -42,6 +42,9 @@ workers:
     ipaddr: "192.168.12.23"
     macaddr: "52:54:00:8e:10:34"
 other:
+  - name: "ovirt"
+    ipaddr: "192.168.12.5"
+    macaddr: "52:54:00:be:1a:c3"
   - name: "node1"
     ipaddr: "192.168.12.6"
     macaddr: "00:e0:4c:98:33:85"

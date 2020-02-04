@@ -1,1 +1,3 @@
 /export	*(rw,sync,root_squash)
+/export/ocp	*(rw,sync,root_squash)
+/export/registry	*(rw,sync,root_squash)
