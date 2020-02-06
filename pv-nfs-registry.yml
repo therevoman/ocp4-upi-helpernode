@@ -11,5 +11,5 @@ spec:
     - nfsvers=4.1
   nfs:
     path: /tank/ocp/registry
-    server: solitude.revoweb.home
+    server: kelex.revoweb.home
   persistentVolumeReclaimPolicy: Retain
