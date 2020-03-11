@@ -14,6 +14,7 @@ max-lease-time 14400;
      	pool {
         	range {{ dhcp.poolstart }} {{ dhcp.poolend }};
 		# Static entries
+                host helper { hardware ethernet 00:e0:4c:68:20:44; fixed-address 192.168.13.1; }
 		host {{ bootstrap.name }} { hardware ethernet {{ bootstrap.macaddr }}; fixed-address {{ bootstrap.ipaddr }}; }
 {% for m in masters %}
 		host {{ m.name }} { hardware ethernet {{ m.macaddr }}; fixed-address {{ m.ipaddr }}; }
@@ -21,6 +22,11 @@ max-lease-time 14400;
 {% for w in workers %}
 		host {{ w.name }} { hardware ethernet {{ w.macaddr }}; fixed-address {{ w.ipaddr }}; }
 {% endfor %}
+{% if other is defined %}
+{% for o in other %}
+		host {{ o.name }} { hardware ethernet {{ o.macaddr }}; fixed-address {{ o.ipaddr }}; }
+{% endfor %}
+{% endif %}
 		# this will not give out addresses to hosts not listed above
 		deny unknown-clients;
 

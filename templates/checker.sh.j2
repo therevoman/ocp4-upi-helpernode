@@ -7,7 +7,7 @@
 ##
 show_help () {
 echo "Usage:"
-echo "$(basename $0) {dns-masters|dns-workers|dns-etcd|install-info|haproxy|services|nfs-info}"
+echo "$(basename $0) {dns-masters|dns-workers|dns-etcd|dns-other|install-info|haproxy|services|nfs-info}"
 echo ""
 }
 ##
@@ -16,7 +16,7 @@ echo "======================"
 echo "DNS Config for Masters"
 echo "======================"
 echo ""
-egrep --color=none -A 4 '^; Create entries for the master hosts' /var/named/zonefile.db
+egrep --color=none -A {{ (masters | length) + 1 }} '^; Create entries for the master hosts' /var/named/zonefile.db
 echo ""
 echo "======================"
 echo "DNS Lookup for Masters"
@@ -35,7 +35,7 @@ echo "======================"
 echo "DNS Config for Workers"
 echo "======================"
 echo ""
-egrep --color=none -A 4 '^; Create entries for the worker' /var/named/zonefile.db
+egrep --color=none -A {{ (workers | length) + 1 }} '^; Create entries for the worker' /var/named/zonefile.db
 echo ""
 echo "======================"
 echo "DNS Lookup for Workers"
@@ -77,6 +77,27 @@ dig @localhost _etcd-server-ssl._tcp.{{ dns.clusterid }}.{{ dns.domain }} SRV +s
 echo ""
 }
 ###
+dns-other () {
+echo "======================"
+echo "DNS Config for Others"
+echo "======================"
+echo ""
+egrep --color=none -A {{ (other | default([]) | length) + 1 }} '^; Create entries for the other' /var/named/zonefile.db
+echo ""
+echo "======================"
+echo "DNS Lookup for Others"
+echo "======================"
+{% if other is defined %}
+{% for o in other %}
+echo ""
+echo "{{ o.name }}.{{ dns.clusterid }}.{{ dns.domain }}"
+echo "-------------------------------------------------"
+echo "IP: $(dig @localhost {{ o.name }}.{{ dns.clusterid }}.{{ dns.domain }} +short)"
+echo "Reverse: $(dig @localhost -x $(dig @localhost {{ o.name }}.{{ dns.clusterid }}.{{ dns.domain }} +short) +short)"
+{% endfor %}
+{% endif %}
+}
+###
 install-info () {
 cat <<EOF
 
@@ -90,7 +111,7 @@ Quickstart Notes:
 	cp *.ign /var/www/html/ignition/
 	restorecon -vR /var/www/html/
 
-(See https://docs.openshift.com/container-platform/4.1/installing/installing_bare_metal/installing-bare-metal.html for more details)
+(See https://docs.openshift.com/container-platform/4.2/installing/installing_bare_metal/installing-bare-metal.html for more details)
 
 EOF
 }
@@ -115,11 +136,22 @@ warningsize=50
 #
 cat <<EOF
 
-An NFS server has been installed and the entire /export directory has been shared out. To create a share simply run the following command as root:
+An NFS server has been installed and the entire /export directory has been shared out. To set up the nfs-auto-provisioner; you just need to run the following command after "openshift-install wait-for bootstrap-complete --log-level debug" has finished...
 
-mkdir -m 777 -p /export/pv0001
+	$(basename $0) nfs-setup
 
-Thats it! There is no need to "share" this by modifying anything!
+Thats it! Right now, this is an "opinionated" setup (there is no "how do I set this up for..."). For now, this is what you get.
+
+Once it's setup, create a PVC for the registry (an example of one has been provided)
+
+	oc create -f /usr/local/src/registry-pvc.yaml -n openshift-image-registry
+
+Check that with "oc get pv" and "oc get pvc -n openshift-image-registry". Then set the registry to use this NFS volume.
+
+	oc patch configs.imageregistry.operator.openshift.io cluster --type merge --patch '{"spec":{"storage":{"pvc":{ "claim": "registry-pvc"}}}}'
+
+
+Check the status by watching "oc get pods -n openshift-image-registry"
 
 EOF
 #
@@ -156,6 +188,9 @@ case "$1" in
   dns-etcd)
     dns-etcd
     ;;
+  dns-other)
+    dns-other
+    ;;
   install-info)
     install-info
     ;;
@@ -167,6 +202,9 @@ case "$1" in
     ;;
   nfs-info)
     nfs-info
+    ;;
+  nfs-setup)
+    /usr/local/bin/nfs-provisioner-setup.sh
     ;;
   *)
     show_help
