@@ -1,5 +1,6 @@
 ---
 disk: sda
+#force_ocp_download: true
 helper:
   name: "helper"
   ipaddr: "192.168.10.1"

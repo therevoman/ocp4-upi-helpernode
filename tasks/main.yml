@@ -22,6 +22,7 @@
         - podman
         - nfs-utils
       state: present
+    when: false
 
   - name: Install packages for DHCP/PXE install
     yum:
@@ -30,7 +31,7 @@
         - syslinux
         - tftp-server
       state: present
-    when: not staticips
+    when: false and not staticips
 
   - name: Write out dhcp file
     template:
