@@ -1,0 +1,11 @@
+default menu.c32   
+ prompt 1
+ timeout 9
+ ONTIMEOUT 1
+ menu title ######## PXE Boot Menu ########  
+ label 1
+ menu label ^1) Install Worker Node
+ menu default
+ kernel rhcos/kernel
+ append initrd=rhcos/initramfs.img nomodeset rd.neednet=1 coreos.inst=yes coreos.inst.install_dev=sda coreos.inst.image_url=http://192.168.10.1:8080/install/bios.raw.gz coreos.inst.ignition_url=http://192.168.10.1:8080/ignition/worker.ign ip=10.34.4.167::10.34.1.1:255.255.0.0:computenode2.ocp4.kla-tencor.com:eno1:none ip=enp175s0:dhcp nameserver=192.168.10.1
+

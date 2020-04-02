@@ -1,0 +1,19 @@
+NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS     CLAIM                                             STORAGECLASS          REASON   AGE
+local-pv-3759a65b                          100Gi      RWO            Delete           Bound      streams/data-0-my-cluster-kafka-0                 one-hundredgig                 129d
+local-pv-5a77f824                          50Gi       RWO            Delete           Bound      streams/data-my-cluster-zookeeper-0               fiftygig                       129d
+local-pv-5cc43e0e                          100Gi      RWO            Delete           Bound      streams/data-0-my-cluster-kafka-1                 one-hundredgig                 129d
+local-pv-86ee4fa9                          200Gi      RWO            Delete           Bound      streams/data-0-my-cluster-kafka-2                 one-hundredgig                 129d
+local-pv-dee8f4e                           50Gi       RWO            Delete           Bound      streams/data-my-cluster-zookeeper-2               fiftygig                       129d
+local-pv-fb94ba01                          50Gi       RWO            Delete           Bound      streams/data-my-cluster-zookeeper-1               fiftygig                       129d
+pvc-049a02d6-fb5b-11e9-b547-0cc47a69a906   2Gi        RWO            Delete           Bound      broker/ex-aao-ex-aao-ss-1                         managed-nfs-storage            131d
+pvc-3ab93c95-fcef-11e9-8de6-0cc47a6a5d1c   100Gi      RWO            Delete           Released   streams/data-0-my-cluster-kafka-1                 managed-nfs-storage            129d
+pvc-3ab96e2a-fcef-11e9-b3ab-0cc47a69a906   100Gi      RWO            Delete           Released   streams/data-0-my-cluster-kafka-2                 managed-nfs-storage            129d
+pvc-3abfdcdd-fcef-11e9-9bb5-0cc47a69b794   100Gi      RWO            Delete           Released   streams/data-0-my-cluster-kafka-0                 managed-nfs-storage            129d
+pvc-a096f2ee-fb41-11e9-a0b8-0cc47a6a5d1c   100Gi      RWX            Delete           Bound      openshift-image-registry/image-registry-storage   managed-nfs-storage            132d
+pvc-b4e901c4-fb5a-11e9-b547-0cc47a69a906   2Gi        RWO            Delete           Bound      broker/ex-aao-ex-aao-ss-0                         managed-nfs-storage            131d
+pvc-c635669b-fb58-11e9-b547-0cc47a69a906   1Gi        RWO            Delete           Bound      datagrid/srv-data-cache-service-0                 managed-nfs-storage            131d
+pvc-da1d4308-fb58-11e9-b547-0cc47a69a906   1Gi        RWO            Delete           Bound      datagrid/srv-data-cache-service-1                 managed-nfs-storage            131d
+pvc-f013c5b0-fb58-11e9-b547-0cc47a69a906   1Gi        RWO            Delete           Bound      datagrid/srv-data-cache-service-2                 managed-nfs-storage            131d
+pvc-fe19df50-fcee-11e9-b3ab-0cc47a69a906   50Gi       RWO            Delete           Released   streams/data-my-cluster-zookeeper-0               managed-nfs-storage            129d
+pvc-fe19e08c-fcee-11e9-8de6-0cc47a6a5d1c   50Gi       RWO            Delete           Released   streams/data-my-cluster-zookeeper-1               managed-nfs-storage            129d
+pvc-fe21d7c7-fcee-11e9-b3ab-0cc47a69a906   50Gi       RWO            Delete           Released   streams/data-my-cluster-zookeeper-2               managed-nfs-storage            129d

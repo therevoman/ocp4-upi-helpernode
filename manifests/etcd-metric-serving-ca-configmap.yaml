@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: etcd-metric-serving-ca
+  namespace: openshift-config
+data:
+  ca-bundle.crt: |
+    -----BEGIN CERTIFICATE-----
+    MIIDJjCCAg6gAwIBAgIIeBnQ3gPiKL4wDQYJKoZIhvcNAQELBQAwMTESMBAGA1UE
+    CxMJb3BlbnNoaWZ0MRswGQYDVQQDExJldGNkLW1ldHJpYy1zaWduZXIwHhcNMjAw
+    NDAyMTcxNjEyWhcNMzAwMzMxMTcxNjEyWjAxMRIwEAYDVQQLEwlvcGVuc2hpZnQx
+    GzAZBgNVBAMTEmV0Y2QtbWV0cmljLXNpZ25lcjCCASIwDQYJKoZIhvcNAQEBBQAD
+    ggEPADCCAQoCggEBALepDAsGcIFepG2njRsp4UbBTiTbgOATdBIicxpJj748VDYK
+    PJQ0PCABZvDTDcCsk+AdZWtOQsvCnoqkBxgj0mQFYFw/pzkqhBRshjOUexrsMFNz
+    7Eovw3oWiUADeiQOsNodOIDAhZ1cfHiHyqp2NrW2zv/ElZ4ZX10kYhdIRPI80JcE
+    pxxKscEDWodUqnRE9k25R+wa/amKsUr4pZ/SrxGaxGOkRlaYAVtLDdLhfxyOElEq
+    mq4aYs9s+dfmATaSASbjOX8LgwKT/P6++w94AIQVvJQtcDama5KU2LDVLAgqHhSI
+    sLOxTFVrXuIA4/BZ14dRZMiLgme+W9XaB61U2TcCAwEAAaNCMEAwDgYDVR0PAQH/
+    BAQDAgKkMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFKpHLfP6iau1u+nQy0wf
+    a54giGSgMA0GCSqGSIb3DQEBCwUAA4IBAQBKzUVDgodghyBAsrbxiAMSOKSugL1Q
+    ltYNF1K31l1hSxDdYFK6oyS4KRCig+ZiYBRp4RdblNdvUB2r+3wQ5cI9zBoPLxgH
+    hWxsHpgVSe43+coVczdzqfAtYN8+zlxpVatxe1C4spb4vu2kbBeLY8BAWz54EFQn
+    9hbU2czdBxsdsz1K4k69/ooj9uzUM/x1mwDRX3Ustfzi1IPv3Syt9g+cLwvoOXQJ
+    iVgixBeP1jZ35rpgh574/8gMDIliOZ93yxMBO0nIn3tg+9FZcmybX5Ff31jQSzze
+    cc1OcCKEBAKIe/TZ0+zrKMJSVs9pHPSTHeuoxiHP8VXUN8eKpzIjiac+
+    -----END CERTIFICATE-----
+    

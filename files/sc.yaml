@@ -1,0 +1,16 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  labels:
+    local.storage.openshift.io/owner-name: 50g
+    local.storage.openshift.io/owner-namespace: local-storage
+  name: fiftygig
+  ownerReferences:
+  - apiVersion: local.storage.openshift.io/v1
+    controller: true
+    kind: LocalVolume
+    name: 50g
+    uid: 91a000c8-fced-11e9-b3ab-0cc47a69a906
+provisioner: kubernetes.io/no-provisioner
+reclaimPolicy: Delete
+volumeBindingMode: WaitForFirstConsumer

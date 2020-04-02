@@ -1,0 +1,48 @@
+$TTL 1W
+@	IN	SOA	ns1.ocp4.kla-tencor.com.	root (
+			2019091231	; serial
+			3H		; refresh (3 hours)
+			30M		; retry (30 minutes)
+			2W		; expiry (2 weeks)
+			1W )		; minimum (1 week)
+	IN	NS	ns1.ocp4.kla-tencor.com.
+	IN	MX 10	smtp.ocp4.kla-tencor.com.
+;
+; 
+ns1	IN	A	192.168.10.1
+smtp	IN	A	192.168.10.1
+;
+helper	IN	A	192.168.10.1
+;
+; The api points to the IP of your load balancer
+api		IN	A	192.168.10.1
+api-int		IN	A	192.168.10.1
+;
+; The wildcard also points to the load balancer
+*.apps		IN	A	192.168.10.1
+;
+; Create entry for the bootstrap host
+bootstrap	IN	A	192.168.10.20
+;
+; Create entries for the master hosts
+master0		IN	A	192.168.10.21
+master1		IN	A	192.168.10.22
+master2		IN	A	192.168.10.23
+;
+; Create entries for the worker hosts
+worker0		IN	A	192.168.10.31
+computenode1		IN	A	192.168.10.32
+computenode2		IN	A	192.168.10.33
+computenode3		IN	A	192.168.10.34
+;
+; The ETCd cluster lives on the masters...so point these to the IP of the masters
+etcd-0	IN	A	192.168.10.21
+etcd-1	IN	A	192.168.10.22
+etcd-2	IN	A	192.168.10.23
+;
+; The SRV records are IMPORTANT....make sure you get these right...note the trailing dot at the end...
+_etcd-server-ssl._tcp	IN	SRV	0 10 2380 etcd-0.ocp4.kla-tencor.com.
+_etcd-server-ssl._tcp	IN	SRV	0 10 2380 etcd-1.ocp4.kla-tencor.com.
+_etcd-server-ssl._tcp	IN	SRV	0 10 2380 etcd-2.ocp4.kla-tencor.com.
+;
+;EOF

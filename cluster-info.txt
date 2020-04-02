@@ -1,0 +1,14 @@
+[root@helper ocp4-upi-helpernode]# openshift-install wait-for install-complete --log-level debug --dir=ocp4
+DEBUG OpenShift Installer v4.3.0
+DEBUG Built from commit 2055609f95b19322ee6cfdd0bea73399297c4a3e
+INFO Waiting up to 30m0s for the cluster at https://api.ocp4.kla-tencor.com:6443 to initialize...
+DEBUG Cluster is initialized
+INFO Waiting up to 10m0s for the openshift-console route to be created...
+DEBUG Route found in openshift-console namespace: console
+DEBUG Route found in openshift-console namespace: downloads
+DEBUG OpenShift console route is created
+INFO Install complete!
+INFO To access the cluster as the system:admin user when using 'oc', run 'export KUBECONFIG=/root/ocp4-upi-helpernode/ocp4/auth/kubeconfig'
+INFO Access the OpenShift web-console here: https://console-openshift-console.apps.ocp4.kla-tencor.com
+INFO Login to the console with user: kubeadmin, password: HFmWT-HWnwj-NISWn-MC879
+

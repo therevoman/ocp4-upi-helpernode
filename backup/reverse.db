@@ -1,0 +1,27 @@
+$TTL 1W
+@	IN	SOA	ns1.ocp4.kla-tencor.com.	root (
+			2019091231	; serial
+			3H		; refresh (3 hours)
+			30M		; retry (30 minutes)
+			2W		; expiry (2 weeks)
+			1W )		; minimum (1 week)
+	IN	NS	ns1.ocp4.kla-tencor.com.
+;
+; syntax is "last octet" and the host must have fqdn with trailing dot
+1       IN      PTR     helper.ocp4.kla-tencor.com.
+
+21	IN	PTR	master0.ocp4.kla-tencor.com.
+22	IN	PTR	master1.ocp4.kla-tencor.com.
+23	IN	PTR	master2.ocp4.kla-tencor.com.
+;
+20	IN	PTR	bootstrap.ocp4.kla-tencor.com.
+;
+1	IN	PTR	api.ocp4.kla-tencor.com.
+1	IN	PTR	api-int.ocp4.kla-tencor.com.
+;
+31	IN	PTR	worker0.ocp4.kla-tencor.com.
+32	IN	PTR	computenode1.ocp4.kla-tencor.com.
+33	IN	PTR	computenode2.ocp4.kla-tencor.com.
+34	IN	PTR	computenode3.ocp4.kla-tencor.com.
+;
+;EOF

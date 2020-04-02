@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: host-etcd
+  namespace: openshift-etcd
+  annotations:
+    alpha.installer.openshift.io/dns-suffix: ocp4.kla-tencor.com
+subsets:
+- addresses:
+  - ip: 192.0.2.1
+    hostname: etcd-0
+  - ip: 192.0.2.2
+    hostname: etcd-1
+  - ip: 192.0.2.3
+    hostname: etcd-2
+  ports:
+  - name: etcd
+    port: 2379
+    protocol: TCP

@@ -1,0 +1,16 @@
+apiVersion: config.openshift.io/v1
+kind: Infrastructure
+metadata:
+  creationTimestamp: null
+  name: cluster
+spec:
+  cloudConfig:
+    name: ""
+status:
+  apiServerInternalURI: https://api-int.ocp4.kla-tencor.com:6443
+  apiServerURL: https://api.ocp4.kla-tencor.com:6443
+  etcdDiscoveryDomain: ocp4.kla-tencor.com
+  infrastructureName: ocp4-b6mnn
+  platform: None
+  platformStatus:
+    type: None

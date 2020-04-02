@@ -1,0 +1,27 @@
+$TTL 600
+@            IN    SOA  localhost. root.localhost.  (
+                          2015112501   ; serial
+                          1h           ; refresh
+                          30m          ; retry
+                          1w           ; expiry
+                          30m)         ; minimum
+                   IN     NS    10.39.11.50.
+                   IN     NS    10.42.6.20.
+                   
+; redirect hostnames
+ccontroller1.kla-tencor.com	CNAME	master0.ocp4.kla-tencor.com.
+ccontroller2.kla-tencor.com	CNAME	master1.ocp4.kla-tencor.com.
+ccontroller3.kla-tencor.com	CNAME	master2.ocp4.kla-tencor.com.
+computenode1.kla-tencor.com	CNAME	computenode1.ocp4.kla-tencor.com.
+computenode2.kla-tencor.com	CNAME	computenode2.ocp4.kla-tencor.com.
+computenode3.kla-tencor.com	CNAME	computenode3.ocp4.kla-tencor.com.
+
+; reverse lookups
+163.4.34.10.in-addr.arpa	PTR	master0.ocp4.kla-tencor.com.
+164.4.34.10.in-addr.arpa	PTR	master1.ocp4.kla-tencor.com.
+169.4.34.10.in-addr.arpa	PTR	master2.ocp4.kla-tencor.com.
+166.4.34.10.in-addr.arpa	PTR	computenode1.ocp4.kla-tencor.com.
+167.4.34.10.in-addr.arpa	PTR	computenode2.ocp4.kla-tencor.com.
+168.4.34.10.in-addr.arpa	PTR	computenode3.ocp4.kla-tencor.com.
+
+

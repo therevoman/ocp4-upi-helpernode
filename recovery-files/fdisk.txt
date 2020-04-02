@@ -1,0 +1,28 @@
+[core@computenode1 ~]$ sudo fdisk -l
+Disk /dev/sda: 447.1 GiB, 480103981056 bytes, 937703088 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disklabel type: gpt
+Disk identifier: 52593551-2995-4827-90A2-C3C31678BE50
+
+Device       Start       End   Sectors   Size Type
+/dev/sda1     2048      4095      2048     1M BIOS boot
+/dev/sda2     4096   2101247   2097152     1G Linux filesystem
+/dev/sda3  2101248 937703054 935601807 446.1G Linux filesystem
+
+
+Disk /dev/sdb: 447.1 GiB, 480103981056 bytes, 937703088 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disklabel type: gpt
+Disk identifier: 9D2CEC99-D91D-7D43-BB44-816CC70B5F1D
+
+Device         Start       End   Sectors  Size Type
+/dev/sdb1       2048  20973567  20971520   10G Linux filesystem
+/dev/sdb2   20973568 125831167 104857600   50G Linux filesystem
+/dev/sdb3  125831168 230688767 104857600   50G Linux filesystem
+/dev/sdb4  230688768 440403967 209715200  100G Linux filesystem
+/dev/sdb5  440403968 650119167 209715200  100G Linux filesystem
+

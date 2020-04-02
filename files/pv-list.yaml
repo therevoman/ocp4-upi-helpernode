@@ -1,0 +1,654 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/bound-by-controller: "yes"
+      pv.kubernetes.io/provisioned-by: local-volume-provisioner-computenode1.ocp4.kla-tencor.com-ea4511de-fb41-11e9-8b50-0cc47a69a906
+    creationTimestamp: "2019-11-01T21:25:40Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    labels:
+      storage.openshift.com/local-volume-owner-name: 100g
+      storage.openshift.com/local-volume-owner-namespace: local-storage
+    name: local-pv-3759a65b
+    resourceVersion: "1492149"
+    selfLink: /api/v1/persistentvolumes/local-pv-3759a65b
+    uid: 2733552b-fcee-11e9-b3ab-0cc47a69a906
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 100Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: data-0-my-cluster-kafka-0
+      namespace: streams
+      resourceVersion: "1492089"
+      uid: 3361d1f1-fcf2-11e9-b3ab-0cc47a69a906
+    local:
+      fsType: xfs
+      path: /mnt/local-storage/one-hundredgig/sdb4
+    nodeAffinity:
+      required:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: kubernetes.io/hostname
+            operator: In
+            values:
+            - computenode1.ocp4.kla-tencor.com
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: one-hundredgig
+    volumeMode: Filesystem
+  status:
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/bound-by-controller: "yes"
+      pv.kubernetes.io/provisioned-by: local-volume-provisioner-computenode1.ocp4.kla-tencor.com-ea4511de-fb41-11e9-8b50-0cc47a69a906
+    creationTimestamp: "2019-11-01T21:21:47Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    labels:
+      storage.openshift.com/local-volume-owner-name: 50g
+      storage.openshift.com/local-volume-owner-namespace: local-storage
+    name: local-pv-5a77f824
+    resourceVersion: "1491836"
+    selfLink: /api/v1/persistentvolumes/local-pv-5a77f824
+    uid: 9c986b24-fced-11e9-8de6-0cc47a6a5d1c
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 50Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: data-my-cluster-zookeeper-0
+      namespace: streams
+      resourceVersion: "1491809"
+      uid: 1e33fb32-fcf2-11e9-b3ab-0cc47a69a906
+    local:
+      fsType: xfs
+      path: /mnt/local-storage/fiftygig/sdb2
+    nodeAffinity:
+      required:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: kubernetes.io/hostname
+            operator: In
+            values:
+            - computenode1.ocp4.kla-tencor.com
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: fiftygig
+    volumeMode: Filesystem
+  status:
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/bound-by-controller: "yes"
+      pv.kubernetes.io/provisioned-by: local-volume-provisioner-computenode2.ocp4.kla-tencor.com-ed4923bd-fb41-11e9-a24f-0cc47a69b794
+    creationTimestamp: "2019-11-01T21:25:39Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    labels:
+      storage.openshift.com/local-volume-owner-name: 100g
+      storage.openshift.com/local-volume-owner-namespace: local-storage
+    name: local-pv-5cc43e0e
+    resourceVersion: "1492155"
+    selfLink: /api/v1/persistentvolumes/local-pv-5cc43e0e
+    uid: 26f782ac-fcee-11e9-8de6-0cc47a6a5d1c
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 100Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: data-0-my-cluster-kafka-1
+      namespace: streams
+      resourceVersion: "1492092"
+      uid: 3362188d-fcf2-11e9-9bb5-0cc47a69b794
+    local:
+      fsType: xfs
+      path: /mnt/local-storage/one-hundredgig/sdb4
+    nodeAffinity:
+      required:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: kubernetes.io/hostname
+            operator: In
+            values:
+            - computenode2.ocp4.kla-tencor.com
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: one-hundredgig
+    volumeMode: Filesystem
+  status:
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/bound-by-controller: "yes"
+      pv.kubernetes.io/provisioned-by: local-volume-provisioner-computenode3.ocp4.kla-tencor.com-eae734d6-fb41-11e9-9487-0cc47a6a5d1c
+    creationTimestamp: "2019-11-01T21:25:40Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    labels:
+      storage.openshift.com/local-volume-owner-name: 100g
+      storage.openshift.com/local-volume-owner-namespace: local-storage
+    name: local-pv-86ee4fa9
+    resourceVersion: "21142321"
+    selfLink: /api/v1/persistentvolumes/local-pv-86ee4fa9
+    uid: 27800978-fcee-11e9-8de6-0cc47a6a5d1c
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 200Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: data-0-my-cluster-kafka-2
+      namespace: streams
+      resourceVersion: "1492090"
+      uid: 3361ebac-fcf2-11e9-b3ab-0cc47a69a906
+    local:
+      fsType: xfs
+      path: /mnt/local-storage/one-hundredgig/sdb4
+    nodeAffinity:
+      required:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: kubernetes.io/hostname
+            operator: In
+            values:
+            - computenode3.ocp4.kla-tencor.com
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: one-hundredgig
+    volumeMode: Filesystem
+  status:
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/bound-by-controller: "yes"
+      pv.kubernetes.io/provisioned-by: local-volume-provisioner-computenode3.ocp4.kla-tencor.com-eae734d6-fb41-11e9-9487-0cc47a6a5d1c
+    creationTimestamp: "2019-11-01T21:21:47Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    labels:
+      storage.openshift.com/local-volume-owner-name: 50g
+      storage.openshift.com/local-volume-owner-namespace: local-storage
+    name: local-pv-dee8f4e
+    resourceVersion: "1491849"
+    selfLink: /api/v1/persistentvolumes/local-pv-dee8f4e
+    uid: 9c7482d6-fced-11e9-9bb5-0cc47a69b794
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 50Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: data-my-cluster-zookeeper-2
+      namespace: streams
+      resourceVersion: "1491810"
+      uid: 1e343b2f-fcf2-11e9-b3ab-0cc47a69a906
+    local:
+      fsType: xfs
+      path: /mnt/local-storage/fiftygig/sdb2
+    nodeAffinity:
+      required:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: kubernetes.io/hostname
+            operator: In
+            values:
+            - computenode3.ocp4.kla-tencor.com
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: fiftygig
+    volumeMode: Filesystem
+  status:
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/bound-by-controller: "yes"
+      pv.kubernetes.io/provisioned-by: local-volume-provisioner-computenode2.ocp4.kla-tencor.com-ed4923bd-fb41-11e9-a24f-0cc47a69b794
+    creationTimestamp: "2019-11-01T21:21:47Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    labels:
+      storage.openshift.com/local-volume-owner-name: 50g
+      storage.openshift.com/local-volume-owner-namespace: local-storage
+    name: local-pv-fb94ba01
+    resourceVersion: "1491842"
+    selfLink: /api/v1/persistentvolumes/local-pv-fb94ba01
+    uid: 9c497113-fced-11e9-8de6-0cc47a6a5d1c
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 50Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: data-my-cluster-zookeeper-1
+      namespace: streams
+      resourceVersion: "1491817"
+      uid: 1e3b6a66-fcf2-11e9-b3ab-0cc47a69a906
+    local:
+      fsType: xfs
+      path: /mnt/local-storage/fiftygig/sdb2
+    nodeAffinity:
+      required:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: kubernetes.io/hostname
+            operator: In
+            values:
+            - computenode2.ocp4.kla-tencor.com
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: fiftygig
+    volumeMode: Filesystem
+  status:
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/provisioned-by: fuseim.pri/nfs-storage
+    creationTimestamp: "2019-10-30T21:19:54Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    name: pvc-049a02d6-fb5b-11e9-b547-0cc47a69a906
+    resourceVersion: "95824"
+    selfLink: /api/v1/persistentvolumes/pvc-049a02d6-fb5b-11e9-b547-0cc47a69a906
+    uid: 049b8c65-fb5b-11e9-b5ad-0cc47a6a5d1c
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 2Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: ex-aao-ex-aao-ss-1
+      namespace: broker
+      resourceVersion: "95813"
+      uid: 049a02d6-fb5b-11e9-b547-0cc47a69a906
+    nfs:
+      path: /opt/ocp4/broker-ex-aao-ex-aao-ss-1-pvc-049a02d6-fb5b-11e9-b547-0cc47a69a906
+      server: 192.168.10.15
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: managed-nfs-storage
+    volumeMode: Filesystem
+  status:
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/provisioned-by: fuseim.pri/nfs-storage
+    creationTimestamp: "2019-11-01T21:33:22Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    name: pvc-3ab93c95-fcef-11e9-8de6-0cc47a6a5d1c
+    resourceVersion: "1490676"
+    selfLink: /api/v1/persistentvolumes/pvc-3ab93c95-fcef-11e9-8de6-0cc47a6a5d1c
+    uid: 3abb3b84-fcef-11e9-9bb5-0cc47a69b794
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 100Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: data-0-my-cluster-kafka-1
+      namespace: streams
+      resourceVersion: "1482885"
+      uid: 3ab93c95-fcef-11e9-8de6-0cc47a6a5d1c
+    nfs:
+      path: /opt/ocp4/streams-data-0-my-cluster-kafka-1-pvc-3ab93c95-fcef-11e9-8de6-0cc47a6a5d1c
+      server: 192.168.10.15
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: managed-nfs-storage
+    volumeMode: Filesystem
+  status:
+    phase: Released
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/provisioned-by: fuseim.pri/nfs-storage
+    creationTimestamp: "2019-11-01T21:33:22Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    name: pvc-3ab96e2a-fcef-11e9-b3ab-0cc47a69a906
+    resourceVersion: "1490646"
+    selfLink: /api/v1/persistentvolumes/pvc-3ab96e2a-fcef-11e9-b3ab-0cc47a69a906
+    uid: 3abb4789-fcef-11e9-9bb5-0cc47a69b794
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 100Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: data-0-my-cluster-kafka-2
+      namespace: streams
+      resourceVersion: "1482886"
+      uid: 3ab96e2a-fcef-11e9-b3ab-0cc47a69a906
+    nfs:
+      path: /opt/ocp4/streams-data-0-my-cluster-kafka-2-pvc-3ab96e2a-fcef-11e9-b3ab-0cc47a69a906
+      server: 192.168.10.15
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: managed-nfs-storage
+    volumeMode: Filesystem
+  status:
+    phase: Released
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/provisioned-by: fuseim.pri/nfs-storage
+    creationTimestamp: "2019-11-01T21:33:22Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    name: pvc-3abfdcdd-fcef-11e9-9bb5-0cc47a69b794
+    resourceVersion: "1490606"
+    selfLink: /api/v1/persistentvolumes/pvc-3abfdcdd-fcef-11e9-9bb5-0cc47a69b794
+    uid: 3ad95b20-fcef-11e9-9bb5-0cc47a69b794
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 100Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: data-0-my-cluster-kafka-0
+      namespace: streams
+      resourceVersion: "1482902"
+      uid: 3abfdcdd-fcef-11e9-9bb5-0cc47a69b794
+    nfs:
+      path: /opt/ocp4/streams-data-0-my-cluster-kafka-0-pvc-3abfdcdd-fcef-11e9-9bb5-0cc47a69b794
+      server: 192.168.10.15
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: managed-nfs-storage
+    volumeMode: Filesystem
+  status:
+    phase: Released
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/provisioned-by: fuseim.pri/nfs-storage
+    creationTimestamp: "2019-10-30T18:18:09Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    name: pvc-a096f2ee-fb41-11e9-a0b8-0cc47a6a5d1c
+    resourceVersion: "17316"
+    selfLink: /api/v1/persistentvolumes/pvc-a096f2ee-fb41-11e9-a0b8-0cc47a6a5d1c
+    uid: a0997a62-fb41-11e9-a0b8-0cc47a6a5d1c
+  spec:
+    accessModes:
+    - ReadWriteMany
+    capacity:
+      storage: 100Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: image-registry-storage
+      namespace: openshift-image-registry
+      resourceVersion: "17308"
+      uid: a096f2ee-fb41-11e9-a0b8-0cc47a6a5d1c
+    nfs:
+      path: /opt/ocp4/openshift-image-registry-image-registry-storage-pvc-a096f2ee-fb41-11e9-a0b8-0cc47a6a5d1c
+      server: 192.168.10.15
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: managed-nfs-storage
+    volumeMode: Filesystem
+  status:
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/provisioned-by: fuseim.pri/nfs-storage
+    creationTimestamp: "2019-10-30T21:17:41Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    name: pvc-b4e901c4-fb5a-11e9-b547-0cc47a69a906
+    resourceVersion: "94835"
+    selfLink: /api/v1/persistentvolumes/pvc-b4e901c4-fb5a-11e9-b547-0cc47a69a906
+    uid: b4ea6e85-fb5a-11e9-b5ad-0cc47a6a5d1c
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 2Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: ex-aao-ex-aao-ss-0
+      namespace: broker
+      resourceVersion: "94823"
+      uid: b4e901c4-fb5a-11e9-b547-0cc47a69a906
+    nfs:
+      path: /opt/ocp4/broker-ex-aao-ex-aao-ss-0-pvc-b4e901c4-fb5a-11e9-b547-0cc47a69a906
+      server: 192.168.10.15
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: managed-nfs-storage
+    volumeMode: Filesystem
+  status:
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/provisioned-by: fuseim.pri/nfs-storage
+    creationTimestamp: "2019-10-30T21:03:51Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    name: pvc-c635669b-fb58-11e9-b547-0cc47a69a906
+    resourceVersion: "88496"
+    selfLink: /api/v1/persistentvolumes/pvc-c635669b-fb58-11e9-b547-0cc47a69a906
+    uid: c6370cd7-fb58-11e9-b5ad-0cc47a6a5d1c
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 1Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: srv-data-cache-service-0
+      namespace: datagrid
+      resourceVersion: "88486"
+      uid: c635669b-fb58-11e9-b547-0cc47a69a906
+    nfs:
+      path: /opt/ocp4/datagrid-srv-data-cache-service-0-pvc-c635669b-fb58-11e9-b547-0cc47a69a906
+      server: 192.168.10.15
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: managed-nfs-storage
+    volumeMode: Filesystem
+  status:
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/provisioned-by: fuseim.pri/nfs-storage
+    creationTimestamp: "2019-10-30T21:04:24Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    name: pvc-da1d4308-fb58-11e9-b547-0cc47a69a906
+    resourceVersion: "88735"
+    selfLink: /api/v1/persistentvolumes/pvc-da1d4308-fb58-11e9-b547-0cc47a69a906
+    uid: da1f83ce-fb58-11e9-b5ad-0cc47a6a5d1c
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 1Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: srv-data-cache-service-1
+      namespace: datagrid
+      resourceVersion: "88725"
+      uid: da1d4308-fb58-11e9-b547-0cc47a69a906
+    nfs:
+      path: /opt/ocp4/datagrid-srv-data-cache-service-1-pvc-da1d4308-fb58-11e9-b547-0cc47a69a906
+      server: 192.168.10.15
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: managed-nfs-storage
+    volumeMode: Filesystem
+  status:
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/provisioned-by: fuseim.pri/nfs-storage
+    creationTimestamp: "2019-10-30T21:05:01Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    name: pvc-f013c5b0-fb58-11e9-b547-0cc47a69a906
+    resourceVersion: "89048"
+    selfLink: /api/v1/persistentvolumes/pvc-f013c5b0-fb58-11e9-b547-0cc47a69a906
+    uid: f01577a9-fb58-11e9-b5ad-0cc47a6a5d1c
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 1Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: srv-data-cache-service-2
+      namespace: datagrid
+      resourceVersion: "89038"
+      uid: f013c5b0-fb58-11e9-b547-0cc47a69a906
+    nfs:
+      path: /opt/ocp4/datagrid-srv-data-cache-service-2-pvc-f013c5b0-fb58-11e9-b547-0cc47a69a906
+      server: 192.168.10.15
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: managed-nfs-storage
+    volumeMode: Filesystem
+  status:
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/provisioned-by: fuseim.pri/nfs-storage
+    creationTimestamp: "2019-11-01T21:31:40Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    name: pvc-fe19df50-fcee-11e9-b3ab-0cc47a69a906
+    resourceVersion: "1490764"
+    selfLink: /api/v1/persistentvolumes/pvc-fe19df50-fcee-11e9-b3ab-0cc47a69a906
+    uid: fe1b914f-fcee-11e9-9bb5-0cc47a69b794
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 50Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: data-my-cluster-zookeeper-0
+      namespace: streams
+      resourceVersion: "1482242"
+      uid: fe19df50-fcee-11e9-b3ab-0cc47a69a906
+    nfs:
+      path: /opt/ocp4/streams-data-my-cluster-zookeeper-0-pvc-fe19df50-fcee-11e9-b3ab-0cc47a69a906
+      server: 192.168.10.15
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: managed-nfs-storage
+    volumeMode: Filesystem
+  status:
+    phase: Released
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/provisioned-by: fuseim.pri/nfs-storage
+    creationTimestamp: "2019-11-01T21:31:40Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    name: pvc-fe19e08c-fcee-11e9-8de6-0cc47a6a5d1c
+    resourceVersion: "1490817"
+    selfLink: /api/v1/persistentvolumes/pvc-fe19e08c-fcee-11e9-8de6-0cc47a6a5d1c
+    uid: fe1b8e07-fcee-11e9-9bb5-0cc47a69b794
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 50Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: data-my-cluster-zookeeper-1
+      namespace: streams
+      resourceVersion: "1482241"
+      uid: fe19e08c-fcee-11e9-8de6-0cc47a6a5d1c
+    nfs:
+      path: /opt/ocp4/streams-data-my-cluster-zookeeper-1-pvc-fe19e08c-fcee-11e9-8de6-0cc47a6a5d1c
+      server: 192.168.10.15
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: managed-nfs-storage
+    volumeMode: Filesystem
+  status:
+    phase: Released
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/provisioned-by: fuseim.pri/nfs-storage
+    creationTimestamp: "2019-11-01T21:31:41Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    name: pvc-fe21d7c7-fcee-11e9-b3ab-0cc47a69a906
+    resourceVersion: "1490870"
+    selfLink: /api/v1/persistentvolumes/pvc-fe21d7c7-fcee-11e9-b3ab-0cc47a69a906
+    uid: fe76868c-fcee-11e9-9bb5-0cc47a69b794
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 50Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: data-my-cluster-zookeeper-2
+      namespace: streams
+      resourceVersion: "1482262"
+      uid: fe21d7c7-fcee-11e9-b3ab-0cc47a69a906
+    nfs:
+      path: /opt/ocp4/streams-data-my-cluster-zookeeper-2-pvc-fe21d7c7-fcee-11e9-b3ab-0cc47a69a906
+      server: 192.168.10.15
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: managed-nfs-storage
+    volumeMode: Filesystem
+  status:
+    phase: Released
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""

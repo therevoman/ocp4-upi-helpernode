@@ -1,0 +1,41 @@
+apiVersion: v1
+items:
+- apiVersion: storage.k8s.io/v1
+  kind: StorageClass
+  metadata:
+    creationTimestamp: "2020-03-10T19:39:46Z"
+    labels:
+      local.storage.openshift.io/owner-name: 50g
+      local.storage.openshift.io/owner-namespace: local-storage
+    name: fiftygig
+    ownerReferences:
+    - apiVersion: local.storage.openshift.io/v1
+      controller: true
+      kind: LocalVolume
+      name: 50g
+      uid: 91a000c8-fced-11e9-b3ab-0cc47a69a906
+    resourceVersion: "52074666"
+    selfLink: /apis/storage.k8s.io/v1/storageclasses/fiftygig
+    uid: e5b8d3c2-6306-11ea-be4b-0cc47a69a906
+  provisioner: kubernetes.io/no-provisioner
+  reclaimPolicy: Delete
+  volumeBindingMode: WaitForFirstConsumer
+- apiVersion: storage.k8s.io/v1
+  kind: StorageClass
+  metadata:
+    annotations:
+      storageclass.kubernetes.io/is-default-class: "true"
+    creationTimestamp: "2019-10-30T18:14:06Z"
+    name: managed-nfs-storage
+    resourceVersion: "17018"
+    selfLink: /apis/storage.k8s.io/v1/storageclasses/managed-nfs-storage
+    uid: 0f9aeebe-fb41-11e9-a0b8-0cc47a6a5d1c
+  parameters:
+    archiveOnDelete: "false"
+  provisioner: fuseim.pri/nfs-storage
+  reclaimPolicy: Delete
+  volumeBindingMode: Immediate
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
