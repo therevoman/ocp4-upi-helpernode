@@ -1,0 +1,22 @@
+apiVersion: "local.storage.openshift.io/v1"
+kind: "LocalVolume"
+metadata:
+  name: "fifty-gig"
+  namespace: "local-storage" 
+spec:
+  nodeSelector: 
+    nodeSelectorTerms:
+    - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - computenode1.ocp4.kla-tencor.com
+          - computenode2.ocp4.kla-tencor.com
+          - computenode3.ocp4.kla-tencor.com
+  storageClassDevices:
+    - storageClassName: "50g-sc"
+      volumeMode: Filesystem 
+      fsType: xfs 
+      devicePaths: 
+        - /dev/sdb2
+
